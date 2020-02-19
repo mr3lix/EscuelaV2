@@ -19,7 +19,7 @@ namespace EscuelaPowert
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-
+            asdasd
         }
     }
 }
