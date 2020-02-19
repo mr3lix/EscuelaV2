@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="65a6ab90124943e1b8d2fe8844ccfbc2" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="EscuelaModel.Actividades" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscuelaModel.Alumnos" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscuelaModel.Asistencia" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscuelaModel.Ciclo" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscuelaModel.Clase" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscuelaModel.Grupo" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscuelaModel.Materias" Width="1.5" PointX="5.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscuelaModel.Plan_Estudio" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscuelaModel.Profesor" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscuelaModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="EscuelaModel.FK__Actividad__ID_Cl__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="EscuelaModel.FK__Alumnos__ID_Grup__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="EscuelaModel.FK__Asistenci__ID_Cl__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="EscuelaModel.FK__Grupo__ID_Ciclo__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="EscuelaModel.FK__Plan_Estu__ID_Ci__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="EscuelaModel.FK__Clase__ID_Grupo__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="EscuelaModel.FK__Profesor__ID_Gru__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="EscuelaModel.FK__Materias__ID_Pla__3C69FB99" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

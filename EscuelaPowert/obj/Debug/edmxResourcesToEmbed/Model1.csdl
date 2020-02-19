@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EscuelaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Actividades">
+    <Key>
+      <PropertyRef Name="Actividades_ID" />
+    </Key>
+    <Property Name="Actividades_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Actividades_Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_Clase" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Clase" Relationship="Self.FK__Actividad__ID_Cl__4AB81AF0" FromRole="Actividades" ToRole="Clase" />
+  </EntityType>
+  <EntityType Name="Alumnos">
+    <Key>
+      <PropertyRef Name="Alumno_ID" />
+    </Key>
+    <Property Name="Alumno_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Alumno_Control" Type="Int32" Nullable="false" />
+    <Property Name="Alumno_Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Alumno_Apellido" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Alumno_Grupo" Type="Int32" Nullable="false" />
+    <Property Name="Alumno_Estado" Type="Boolean" Nullable="false" />
+    <Property Name="ID_Grupo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Grupo" Relationship="Self.FK__Alumnos__ID_Grup__44FF419A" FromRole="Alumnos" ToRole="Grupo" />
+  </EntityType>
+  <EntityType Name="Asistencia">
+    <Key>
+      <PropertyRef Name="Asistencia_ID" />
+    </Key>
+    <Property Name="Asistencia_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Asistencia_Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ID_Alumno" Type="Int32" Nullable="false" />
+    <Property Name="ID_Clase" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Clase" Relationship="Self.FK__Asistenci__ID_Cl__4D94879B" FromRole="Asistencia" ToRole="Clase" />
+  </EntityType>
+  <EntityType Name="Ciclo">
+    <Key>
+      <PropertyRef Name="Ciclo_ID" />
+    </Key>
+    <Property Name="Ciclo_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ciclo_Ano" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Grupo" Relationship="Self.FK__Grupo__ID_Ciclo__3F466844" FromRole="Ciclo" ToRole="Grupo" />
+    <NavigationProperty Name="Plan_Estudio" Relationship="Self.FK__Plan_Estu__ID_Ci__398D8EEE" FromRole="Ciclo" ToRole="Plan_Estudio" />
+  </EntityType>
+  <EntityType Name="Clase">
+    <Key>
+      <PropertyRef Name="Clase_ID" />
+    </Key>
+    <Property Name="Clase_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_Grupo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Actividades" Relationship="Self.FK__Actividad__ID_Cl__4AB81AF0" FromRole="Clase" ToRole="Actividades" />
+    <NavigationProperty Name="Asistencia" Relationship="Self.FK__Asistenci__ID_Cl__4D94879B" FromRole="Clase" ToRole="Asistencia" />
+    <NavigationProperty Name="Grupo" Relationship="Self.FK__Clase__ID_Grupo__47DBAE45" FromRole="Clase" ToRole="Grupo" />
+  </EntityType>
+  <EntityType Name="Grupo">
+    <Key>
+      <PropertyRef Name="Grupo_ID" />
+    </Key>
+    <Property Name="Grupo_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Grupo_Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_Ciclo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Alumnos" Relationship="Self.FK__Alumnos__ID_Grup__44FF419A" FromRole="Grupo" ToRole="Alumnos" />
+    <NavigationProperty Name="Ciclo" Relationship="Self.FK__Grupo__ID_Ciclo__3F466844" FromRole="Grupo" ToRole="Ciclo" />
+    <NavigationProperty Name="Clase" Relationship="Self.FK__Clase__ID_Grupo__47DBAE45" FromRole="Grupo" ToRole="Clase" />
+    <NavigationProperty Name="Profesor" Relationship="Self.FK__Profesor__ID_Gru__4222D4EF" FromRole="Grupo" ToRole="Profesor" />
+  </EntityType>
+  <EntityType Name="Materias">
+    <Key>
+      <PropertyRef Name="Materia_ID" />
+    </Key>
+    <Property Name="Materia_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Materia_Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_Plan" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Plan_Estudio" Relationship="Self.FK__Materias__ID_Pla__3C69FB99" FromRole="Materias" ToRole="Plan_Estudio" />
+  </EntityType>
+  <EntityType Name="Plan_Estudio">
+    <Key>
+      <PropertyRef Name="Plan_ID" />
+    </Key>
+    <Property Name="Plan_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_Ciclo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ciclo" Relationship="Self.FK__Plan_Estu__ID_Ci__398D8EEE" FromRole="Plan_Estudio" ToRole="Ciclo" />
+    <NavigationProperty Name="Materias" Relationship="Self.FK__Materias__ID_Pla__3C69FB99" FromRole="Plan_Estudio" ToRole="Materias" />
+  </EntityType>
+  <EntityType Name="Profesor">
+    <Key>
+      <PropertyRef Name="Profesor_ID" />
+    </Key>
+    <Property Name="Profesor_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Profesor_Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_Grupo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Grupo" Relationship="Self.FK__Profesor__ID_Gru__4222D4EF" FromRole="Profesor" ToRole="Grupo" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__Actividad__ID_Cl__4AB81AF0">
+    <End Role="Clase" Type="Self.Clase" Multiplicity="1" />
+    <End Role="Actividades" Type="Self.Actividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clase">
+        <PropertyRef Name="Clase_ID" />
+      </Principal>
+      <Dependent Role="Actividades">
+        <PropertyRef Name="ID_Clase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumnos__ID_Grup__44FF419A">
+    <End Role="Grupo" Type="Self.Grupo" Multiplicity="1" />
+    <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="Grupo_ID" />
+      </Principal>
+      <Dependent Role="Alumnos">
+        <PropertyRef Name="ID_Grupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Asistenci__ID_Cl__4D94879B">
+    <End Role="Clase" Type="Self.Clase" Multiplicity="1" />
+    <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clase">
+        <PropertyRef Name="Clase_ID" />
+      </Principal>
+      <Dependent Role="Asistencia">
+        <PropertyRef Name="ID_Clase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Grupo__ID_Ciclo__3F466844">
+    <End Role="Ciclo" Type="Self.Ciclo" Multiplicity="1" />
+    <End Role="Grupo" Type="Self.Grupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciclo">
+        <PropertyRef Name="Ciclo_ID" />
+      </Principal>
+      <Dependent Role="Grupo">
+        <PropertyRef Name="ID_Ciclo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Plan_Estu__ID_Ci__398D8EEE">
+    <End Role="Ciclo" Type="Self.Ciclo" Multiplicity="1" />
+    <End Role="Plan_Estudio" Type="Self.Plan_Estudio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciclo">
+        <PropertyRef Name="Ciclo_ID" />
+      </Principal>
+      <Dependent Role="Plan_Estudio">
+        <PropertyRef Name="ID_Ciclo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clase__ID_Grupo__47DBAE45">
+    <End Role="Grupo" Type="Self.Grupo" Multiplicity="1" />
+    <End Role="Clase" Type="Self.Clase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="Grupo_ID" />
+      </Principal>
+      <Dependent Role="Clase">
+        <PropertyRef Name="ID_Grupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Profesor__ID_Gru__4222D4EF">
+    <End Role="Grupo" Type="Self.Grupo" Multiplicity="1" />
+    <End Role="Profesor" Type="Self.Profesor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="Grupo_ID" />
+      </Principal>
+      <Dependent Role="Profesor">
+        <PropertyRef Name="ID_Grupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Materias__ID_Pla__3C69FB99">
+    <End Role="Plan_Estudio" Type="Self.Plan_Estudio" Multiplicity="1" />
+    <End Role="Materias" Type="Self.Materias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plan_Estudio">
+        <PropertyRef Name="Plan_ID" />
+      </Principal>
+      <Dependent Role="Materias">
+        <PropertyRef Name="ID_Plan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EscuelaEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Actividades" EntityType="Self.Actividades" />
+    <EntitySet Name="Alumnos" EntityType="Self.Alumnos" />
+    <EntitySet Name="Asistencia" EntityType="Self.Asistencia" />
+    <EntitySet Name="Ciclo" EntityType="Self.Ciclo" />
+    <EntitySet Name="Clase" EntityType="Self.Clase" />
+    <EntitySet Name="Grupo" EntityType="Self.Grupo" />
+    <EntitySet Name="Materias" EntityType="Self.Materias" />
+    <EntitySet Name="Plan_Estudio" EntityType="Self.Plan_Estudio" />
+    <EntitySet Name="Profesor" EntityType="Self.Profesor" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK__Actividad__ID_Cl__4AB81AF0" Association="Self.FK__Actividad__ID_Cl__4AB81AF0">
+      <End Role="Clase" EntitySet="Clase" />
+      <End Role="Actividades" EntitySet="Actividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumnos__ID_Grup__44FF419A" Association="Self.FK__Alumnos__ID_Grup__44FF419A">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="Alumnos" EntitySet="Alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Asistenci__ID_Cl__4D94879B" Association="Self.FK__Asistenci__ID_Cl__4D94879B">
+      <End Role="Clase" EntitySet="Clase" />
+      <End Role="Asistencia" EntitySet="Asistencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Grupo__ID_Ciclo__3F466844" Association="Self.FK__Grupo__ID_Ciclo__3F466844">
+      <End Role="Ciclo" EntitySet="Ciclo" />
+      <End Role="Grupo" EntitySet="Grupo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Plan_Estu__ID_Ci__398D8EEE" Association="Self.FK__Plan_Estu__ID_Ci__398D8EEE">
+      <End Role="Ciclo" EntitySet="Ciclo" />
+      <End Role="Plan_Estudio" EntitySet="Plan_Estudio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clase__ID_Grupo__47DBAE45" Association="Self.FK__Clase__ID_Grupo__47DBAE45">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="Clase" EntitySet="Clase" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Profesor__ID_Gru__4222D4EF" Association="Self.FK__Profesor__ID_Gru__4222D4EF">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="Profesor" EntitySet="Profesor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Materias__ID_Pla__3C69FB99" Association="Self.FK__Materias__ID_Pla__3C69FB99">
+      <End Role="Plan_Estudio" EntitySet="Plan_Estudio" />
+      <End Role="Materias" EntitySet="Materias" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
