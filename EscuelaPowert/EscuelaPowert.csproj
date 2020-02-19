@@ -70,6 +70,12 @@
     <Compile Include="Clase.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FrmaddGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmaddGrupo.Designer.cs">
+      <DependentUpon>FrmaddGrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frmaddmate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmaddGrupo.resx">
+      <DependentUpon>FrmaddGrupo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frmaddmate.resx">
       <DependentUpon>Frmaddmate.cs</DependentUpon>
     </EmbeddedResource>
