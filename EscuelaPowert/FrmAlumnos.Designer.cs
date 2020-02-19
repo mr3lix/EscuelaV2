@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnadd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.CMB_Ciclo = new System.Windows.Forms.ComboBox();
+            this.CMBCiclo = new System.Windows.Forms.ComboBox();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DateGriAlum)).BeginInit();
@@ -64,7 +64,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.btnadd);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.CMB_Ciclo);
+            this.panel2.Controls.Add(this.CMBCiclo);
             this.panel2.Controls.Add(this.txt_buscar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -100,13 +100,13 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Ciclo:";
             // 
-            // CMB_Ciclo
+            // CMBCiclo
             // 
-            this.CMB_Ciclo.FormattingEnabled = true;
-            this.CMB_Ciclo.Location = new System.Drawing.Point(160, 3);
-            this.CMB_Ciclo.Name = "CMB_Ciclo";
-            this.CMB_Ciclo.Size = new System.Drawing.Size(131, 21);
-            this.CMB_Ciclo.TabIndex = 5;
+            this.CMBCiclo.FormattingEnabled = true;
+            this.CMBCiclo.Location = new System.Drawing.Point(160, 3);
+            this.CMBCiclo.Name = "CMBCiclo";
+            this.CMBCiclo.Size = new System.Drawing.Size(131, 21);
+            this.CMBCiclo.TabIndex = 5;
             // 
             // txt_buscar
             // 
@@ -140,7 +140,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView DateGriAlum;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox CMB_Ciclo;
+        private System.Windows.Forms.ComboBox CMBCiclo;
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnadd;
