@@ -211,6 +211,9 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmaddAlu.resx">
+      <DependentUpon>FrmaddAlu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frmaddmate.resx">
       <DependentUpon>Frmaddmate.cs</DependentUpon>
     </EmbeddedResource>
