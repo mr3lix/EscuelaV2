@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace EscuelaPowert
 {
-    public partial class frmaddAlu : Form
+    public partial class FrmaddAlu : Form
     {
-        public frmaddAlu()
+        public FrmaddAlu()
         {
             InitializeComponent();
-        }
-
-        private void btnguardar_Click(object sender, EventArgs e)
-        {
-            asdasd
         }
     }
 }

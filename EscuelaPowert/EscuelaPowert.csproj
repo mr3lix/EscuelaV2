@@ -70,11 +70,11 @@
     <Compile Include="Clase.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="FrmaddGrupo.cs">
+    <Compile Include="FrmaddAlu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmaddGrupo.Designer.cs">
-      <DependentUpon>FrmaddGrupo.cs</DependentUpon>
+    <Compile Include="FrmaddAlu.Designer.cs">
+      <DependentUpon>FrmaddAlu.cs</DependentUpon>
     </Compile>
     <Compile Include="Frmaddmate.cs">
       <SubType>Form</SubType>
@@ -179,12 +179,6 @@
     <Compile Include="Models\Evaluacion.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
-    <Compile Include="FrmaddAlu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmaddAlu.Designer.cs">
-      <DependentUpon>FrmaddAlu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Grupo.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
@@ -217,9 +211,6 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmaddGrupo.resx">
-      <DependentUpon>FrmaddGrupo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frmaddmate.resx">
       <DependentUpon>Frmaddmate.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,9 +231,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Grupos\Clase\Actividad\FrmAddAct.resx">
       <DependentUpon>FrmAddAct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmaddAlu.resx">
-      <DependentUpon>FrmaddAlu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

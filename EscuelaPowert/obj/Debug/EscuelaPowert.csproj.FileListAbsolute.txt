@@ -19,3 +19,16 @@ C:\Users\Roberto\source\repos\EscuelaPowert\EscuelaPowert\obj\Debug\EscuelaPower
 C:\Users\Roberto\source\repos\EscuelaPowert\EscuelaPowert\obj\Debug\EscuelaPowert.csprojAssemblyReference.cache
 C:\Users\Roberto\source\repos\EscuelaPowert\EscuelaPowert\obj\Debug\EscuelaPowert.Frmaddmate.resources
 C:\Users\Roberto\source\repos\EscuelaPowert\EscuelaPowert\obj\Debug\EscuelaPowert.FrmaddAlu.resources
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.Frmaddmate.resources
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.FrmAsistencia.resources
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.FrmActividades.resources
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.FrmAlumnos.resources
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.FrmGrupos.resources
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.FrmMaterias.resources
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.FrmAddAct.resources
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.Properties.Resources.resources
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.exe
+C:\Users\Usuario\Documents\GitHub\EscuelaV2\EscuelaPowert\obj\Debug\EscuelaPowert.pdb
