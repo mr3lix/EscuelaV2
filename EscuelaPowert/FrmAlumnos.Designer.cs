@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DateGriAlum = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnadd = new System.Windows.Forms.Button();
@@ -37,27 +37,27 @@
             this.CMB_Ciclo = new System.Windows.Forms.ComboBox();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateGriAlum)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.DateGriAlum);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 56);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(768, 314);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // DateGriAlum
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(768, 314);
-            this.dataGridView1.TabIndex = 0;
+            this.DateGriAlum.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DateGriAlum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DateGriAlum.Location = new System.Drawing.Point(0, 0);
+            this.DateGriAlum.Name = "DateGriAlum";
+            this.DateGriAlum.Size = new System.Drawing.Size(768, 314);
+            this.DateGriAlum.TabIndex = 0;
             // 
             // panel2
             // 
@@ -128,7 +128,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alumnos";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateGriAlum)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -138,7 +138,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DateGriAlum;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox CMB_Ciclo;
         private System.Windows.Forms.TextBox txt_buscar;

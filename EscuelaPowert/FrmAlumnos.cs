@@ -15,11 +15,20 @@ namespace EscuelaPowert
         public FrmAlumnos()
         {
             InitializeComponent();
+            ReadAl();
         }
         private void btnadd_Click(object sender, EventArgs e)
         {
             FrmaddAlu F = new FrmaddAlu();
             F.ShowDialog();
+        }
+
+        private void ReadAl()
+        {
+            using (EscuelaEntities1 db = new EscuelaEntities1())
+            {
+                DateGriAlum.DataSource = db.Alumnos.ToList();
+            }
         }
     }
 }
