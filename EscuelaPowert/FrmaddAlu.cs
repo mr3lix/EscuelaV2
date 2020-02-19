@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EscuelaPowert
 {
-    public partial class FrmaddGrupo : Form
+    public partial class frmaddAlu : Form
     {
-        public FrmaddGrupo()
+        public frmaddAlu()
         {
             InitializeComponent();
         }
