@@ -1,6 +1,6 @@
 ﻿namespace EscuelaPowert
 {
-    partial class FrmaddAlu
+    partial class FrmaddGrupo
     {
         /// <summary>
         /// Required designer variable.

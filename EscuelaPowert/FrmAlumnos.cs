@@ -18,7 +18,7 @@ namespace EscuelaPowert
         }
         private void btnadd_Click(object sender, EventArgs e)
         {
-            FrmaddAlu F = new FrmaddAlu();
+            FrmaddGrupo F = new FrmaddGrupo();
             F.ShowDialog();
         }
     }
