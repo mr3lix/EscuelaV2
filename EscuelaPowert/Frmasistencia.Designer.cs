@@ -50,7 +50,7 @@
             this.panel1.Controls.Add(this.datagridAsus);
             this.panel1.Location = new System.Drawing.Point(0, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1004, 344);
+            this.panel1.Size = new System.Drawing.Size(1276, 440);
             this.panel1.TabIndex = 1;
             // 
             // datagridAsus
@@ -59,7 +59,7 @@
             this.datagridAsus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagridAsus.Location = new System.Drawing.Point(0, 0);
             this.datagridAsus.Name = "datagridAsus";
-            this.datagridAsus.Size = new System.Drawing.Size(1004, 344);
+            this.datagridAsus.Size = new System.Drawing.Size(1276, 440);
             this.datagridAsus.TabIndex = 0;
             this.datagridAsus.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridAsus_CellContentClick);
             // 
@@ -108,7 +108,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(888, 62);
+            this.panel2.Size = new System.Drawing.Size(1160, 62);
             this.panel2.TabIndex = 2;
             // 
             // cmbclase
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 412);
+            this.ClientSize = new System.Drawing.Size(1160, 508);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmAsistencia";

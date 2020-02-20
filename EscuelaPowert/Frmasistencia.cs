@@ -52,6 +52,16 @@ namespace EscuelaPowert
             }
         }
 
+        private void Generar()
+        {
+            using (EscuelaEntitys db = new EscuelaEntitys())
+            {
+                Asistencia A = new Asistencia();
+                var Al = from N in db.Alumnos where N.ID_Grupo == cmbclase.SelectedIndex select N.Alumno_ID;
+                
+            }
+        }
+
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
