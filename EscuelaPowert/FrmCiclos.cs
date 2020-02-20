@@ -26,7 +26,7 @@ namespace EscuelaPowert
 
         private void loadCiclo()
         {
-            using (EscuelaEntities1 db = new EscuelaEntities1())
+            using (Models.EscuelaEntities2 db = new Models.EscuelaEntities2())
             {
                 dataGridView1.DataSource = db.Ciclo.ToList();
             }

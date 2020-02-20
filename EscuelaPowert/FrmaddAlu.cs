@@ -19,7 +19,7 @@ namespace EscuelaPowert
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            using (EscuelaEntities1 db = new EscuelaEntities1())
+            using (Models.EscuelaEntities2 db = new Models.EscuelaEntities2())
             {
                 Alumnos A = new Alumnos();
                 A.Alumno_Nombre = txtnombre.Text;

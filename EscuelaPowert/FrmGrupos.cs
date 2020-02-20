@@ -25,7 +25,7 @@ namespace EscuelaPowert
 
         private void LoadData()
         {
-            using (EscuelaEntities1 db = new EscuelaEntities1())
+            using (Models.EscuelaEntities2 db = new Models.EscuelaEntities2())
             {
                 dataGridView1.DataSource = db.Grupo.ToList();
             }
@@ -33,7 +33,7 @@ namespace EscuelaPowert
 
         private void buscartxt()
         {
-            using (EscuelaEntities1 db = new EscuelaEntities1())
+            using (Models.EscuelaEntities2 db = new Models.EscuelaEntities2())
             {
                 
                 
