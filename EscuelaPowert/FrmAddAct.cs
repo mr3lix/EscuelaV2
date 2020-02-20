@@ -17,12 +17,27 @@ namespace EscuelaPowert
             InitializeComponent();
         }
 
+        private void loadcm()
+        {
+            using (EscuelaEntitys db = new EscuelaEntitys())
+            {
+                var s = from d in db.Tipo_Actividad select new { d.Actividad_Nombre };
+                cmbtipo.DataSource = s.ToList();
+            }
+        }
+
         private void btnadd_Click(object sender, EventArgs e)
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-
+                Actividade A = new Actividade();
+                A.Actividades_Nombre = txt_name.Text;
+                A.Actividad_Descripcion = txtdescrip.Text;
+                A.Tipo_Actividad = cmbtipo.SelectedIndex;
+                db.Actividades.Add(A);
+                db.SaveChanges();
             }
+            this.Close();
         }
     }
 }

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.btnadd = new System.Windows.Forms.Button();
-            this.CMB_Tipo = new System.Windows.Forms.ComboBox();
-            this.txt_name = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtdescrip = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.cmbtipo = new System.Windows.Forms.ComboBox();
+            this.txt_name = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnadd
@@ -47,28 +47,13 @@
             this.btnadd.UseVisualStyleBackColor = true;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
-            // CMB_Tipo
+            // txtdescrip
             // 
-            this.CMB_Tipo.FormattingEnabled = true;
-            this.CMB_Tipo.Location = new System.Drawing.Point(85, 12);
-            this.CMB_Tipo.Name = "CMB_Tipo";
-            this.CMB_Tipo.Size = new System.Drawing.Size(121, 21);
-            this.CMB_Tipo.TabIndex = 1;
-            // 
-            // txt_name
-            // 
-            this.txt_name.Location = new System.Drawing.Point(85, 56);
-            this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(100, 20);
-            this.txt_name.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(85, 92);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(445, 87);
-            this.textBox1.TabIndex = 3;
+            this.txtdescrip.Location = new System.Drawing.Point(85, 92);
+            this.txtdescrip.Multiline = true;
+            this.txtdescrip.Name = "txtdescrip";
+            this.txtdescrip.Size = new System.Drawing.Size(445, 87);
+            this.txtdescrip.TabIndex = 3;
             // 
             // label1
             // 
@@ -97,17 +82,32 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Descripcion:";
             // 
+            // cmbtipo
+            // 
+            this.cmbtipo.FormattingEnabled = true;
+            this.cmbtipo.Location = new System.Drawing.Point(85, 50);
+            this.cmbtipo.Name = "cmbtipo";
+            this.cmbtipo.Size = new System.Drawing.Size(121, 21);
+            this.cmbtipo.TabIndex = 7;
+            // 
+            // txt_name
+            // 
+            this.txt_name.Location = new System.Drawing.Point(85, 12);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(100, 20);
+            this.txt_name.TabIndex = 8;
+            // 
             // FrmAddAct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 220);
+            this.Controls.Add(this.txt_name);
+            this.Controls.Add(this.cmbtipo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txt_name);
-            this.Controls.Add(this.CMB_Tipo);
+            this.Controls.Add(this.txtdescrip);
             this.Controls.Add(this.btnadd);
             this.Name = "FrmAddAct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -120,11 +120,11 @@
         #endregion
 
         private System.Windows.Forms.Button btnadd;
-        private System.Windows.Forms.ComboBox CMB_Tipo;
-        private System.Windows.Forms.TextBox txt_name;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtdescrip;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbtipo;
+        private System.Windows.Forms.TextBox txt_name;
     }
 }
