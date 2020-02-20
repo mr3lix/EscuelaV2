@@ -45,6 +45,7 @@
             this.btnadd.TabIndex = 0;
             this.btnadd.Text = "Guardar";
             this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // label1
             // 

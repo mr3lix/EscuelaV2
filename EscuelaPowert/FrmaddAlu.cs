@@ -16,5 +16,10 @@ namespace EscuelaPowert
         {
             InitializeComponent();
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
