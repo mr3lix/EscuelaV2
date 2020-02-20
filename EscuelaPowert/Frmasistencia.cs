@@ -16,9 +16,9 @@ namespace EscuelaPowert
         public FrmAsistencia()
         {
             InitializeComponent();
-            loadData();
             LoadCom();
             LoadClase();
+            loadData();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -29,7 +29,10 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                var a = from d in db.Asistencias select new { d.ID_Alumno, d.ID_Clase,d.Alumno.Alumno_Nombre };
+                var a = from d in db.Asistencias join A in db.Alumnos on d.ID_Alumno 
+                            equals A.Alumno_ID where A.ID_Grupo == cmbclase.SelectedIndex
+                                select new { A.Alumno_ID, A.Alumno_Nombre, A.Alumno_Apellido };
+
                 datagridAsus.DataSource = a.ToList();
             }
         }
@@ -82,6 +85,11 @@ namespace EscuelaPowert
                 db.Asistencias.Add(A);
                 db.SaveChanges();
             }
+        }
+
+        private void cmbclase_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadData();
         }
     }
 }

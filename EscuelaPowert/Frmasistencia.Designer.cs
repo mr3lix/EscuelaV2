@@ -114,10 +114,11 @@
             // cmbclase
             // 
             this.cmbclase.FormattingEnabled = true;
-            this.cmbclase.Location = new System.Drawing.Point(265, 3);
+            this.cmbclase.Location = new System.Drawing.Point(255, 3);
             this.cmbclase.Name = "cmbclase";
             this.cmbclase.Size = new System.Drawing.Size(121, 21);
             this.cmbclase.TabIndex = 5;
+            this.cmbclase.SelectedIndexChanged += new System.EventHandler(this.cmbclase_SelectedIndexChanged);
             // 
             // label3
             // 
