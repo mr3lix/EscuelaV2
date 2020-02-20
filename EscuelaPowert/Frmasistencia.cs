@@ -103,10 +103,13 @@ namespace EscuelaPowert
 
         private void btnallsele_Click(object sender, EventArgs e)
         {
-            var Al = from N in db.Alumnos where N.ID_Grupo == 1 select N;
-            foreach (var item in Al)
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                Gen(item.Alumno_ID, item.ID_Grupo);
+                var Al = from N in db.Alumnos where N.ID_Grupo == 1 select N;
+                foreach (var item in Al)
+                {
+                   // Gen(item.Alumno_ID, item.ID_Grupo);
+                }
             }
         }
     }
