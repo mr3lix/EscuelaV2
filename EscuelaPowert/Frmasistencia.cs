@@ -26,6 +26,7 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
+                var a = from d in db.Asistencias select new { d.ID_Alumno, d.ID_Clase };
                 datagridAsus.DataSource = db.Asistencias.ToList();
             }
         }

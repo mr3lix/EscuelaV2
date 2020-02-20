@@ -15,6 +15,7 @@ namespace EscuelaPowert
         public Frmaddmate()
         {
             InitializeComponent();
+            loadPlan();
         }
 
         private void btnguardar_Click(object sender, EventArgs e)
@@ -28,6 +29,15 @@ namespace EscuelaPowert
                 db.SaveChanges();
             }
             this.Close();
+        }
+
+        private void loadPlan()
+        {
+            using (EscuelaEntitys db = new EscuelaEntitys())
+            {
+                var d = from s in db.Cicloes select s.Ciclo_Ano;
+                cmbplan.DataSource = d.ToList();
+            }
         }
     }
 }
