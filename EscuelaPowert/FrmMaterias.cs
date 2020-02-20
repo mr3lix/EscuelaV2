@@ -15,6 +15,7 @@ namespace EscuelaPowert
         public FrmMaterias()
         {
             InitializeComponent();
+            loadDataMa();
         }
 
         private void btnadd_Click(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace EscuelaPowert
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAsistencia());
+            Application.Run(new FrmMaterias());
         }
     }
 }

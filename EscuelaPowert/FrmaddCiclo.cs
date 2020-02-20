@@ -26,8 +26,8 @@ namespace EscuelaPowert
                 //c.CicloInicio = dtpInicioCiclo.Fecha
                 //c.CicloFinal = dtpFinalCiclo.Fecha
 
-                db.Grupo.Add(g);
-                db.SaveChanges();
+                //db.Grupo.Add(c);
+                //db.SaveChanges();
             }
         }
     }
