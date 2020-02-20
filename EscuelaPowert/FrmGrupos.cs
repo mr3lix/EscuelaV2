@@ -19,7 +19,25 @@ namespace EscuelaPowert
 
         private void btn_nuevo_Click(object sender, EventArgs e)
         {
+            FrmaddGrupo F = new FrmaddGrupo();
+            F.ShowDialog();
+        }
 
+        private void LoadData()
+        {
+            using (EscuelaEntities1 db = new EscuelaEntities1())
+            {
+                dataGridView1.DataSource = db.Grupo.ToList();
+            }
+        }
+
+        private void buscartxt()
+        {
+            using (EscuelaEntities1 db = new EscuelaEntities1())
+            {
+                
+                
+            }
         }
     }
 }

@@ -28,5 +28,13 @@ namespace EscuelaPowert
                 db.SaveChanges();
             }
         }
+
+        private void loadCiclo()
+        {
+            using (EscuelaEntities1 db = new EscuelaEntities1())
+            {
+                cbCiclo.DataSource = db.Ciclo.ToList();
+            }
+        }
     }
 }

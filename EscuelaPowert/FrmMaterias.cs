@@ -22,5 +22,13 @@ namespace EscuelaPowert
             Frmaddmate F = new Frmaddmate();
             F.ShowDialog();
         }
+
+        private void loadDataMa()
+        {
+            using (EscuelaEntities1 db = new EscuelaEntities1())
+            {
+                dataGridView1.DataSource = db.Materias.ToList();
+            }
+        }
     }
 }
