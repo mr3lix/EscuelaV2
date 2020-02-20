@@ -19,9 +19,9 @@ namespace EscuelaPowert
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            using (EscuelaEntities1 db = new EscuelaEntities1())
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                Actividades A = new Actividades();
+                Actividade A = new Actividade();
                 A.Actividades_Nombre = txtnombre.Text;
                 db.Actividades.Add(A);
                 db.SaveChanges();

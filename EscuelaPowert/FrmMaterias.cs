@@ -26,7 +26,7 @@ namespace EscuelaPowert
 
         private void loadDataMa()
         {
-            using (EscuelaEntities1 db = new EscuelaEntities1())
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
                 dataGridView1.DataSource = from d in db.Materias select d;
             }

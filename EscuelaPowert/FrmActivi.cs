@@ -25,7 +25,7 @@ namespace EscuelaPowert
 
         private void LoadActivi()
         {
-            using (Models.EscuelaEntities2 db = new Models.EscuelaEntities2())
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
                 DatagridActivi.DataSource = db.Actividades.ToList();
             }

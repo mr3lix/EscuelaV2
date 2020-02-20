@@ -19,21 +19,21 @@ namespace EscuelaPowert
 
         private void btnAgregarGrupo_Click(object sender, EventArgs e)
         {
-            using (EscuelaEntities1 db = new EscuelaEntities1())
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
                 Grupo g = new Grupo();
                 g.Grupo_Nombre = txtbGrupoNombre.Text;
                 g.ID_Ciclo = cbCiclo.SelectedIndex;
-                db.Grupo.Add(g);
+                db.Grupoes.Add(g);
                 db.SaveChanges();
             }
         }
 
         private void loadCiclo()
         {
-            using (EscuelaEntities1 db = new EscuelaEntities1())
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                cbCiclo.DataSource = db.Ciclo.ToList();
+                cbCiclo.DataSource = db.Cicloes.ToList();
             }
         }
     }

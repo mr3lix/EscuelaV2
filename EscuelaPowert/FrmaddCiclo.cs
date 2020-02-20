@@ -19,7 +19,7 @@ namespace EscuelaPowert
 
         private void btnAgregarCiclo_Click(object sender, EventArgs e)
         {
-            using (EscuelaEntities1 db = new EscuelaEntities1())
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
                 Ciclo c = new Ciclo();
                 //c.Ciclo_Ano El año podría manejarse por separado

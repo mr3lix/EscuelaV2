@@ -24,17 +24,17 @@ namespace EscuelaPowert
 
         private void loadData()
         {
-            using (EscuelaEntities1 db = new EscuelaEntities1())
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                datagridAsus.DataSource = db.Asistencia.ToList();
+                datagridAsus.DataSource = db.Asistencias.ToList();
             }
         }
 
         private void LoadCom()
         {
-            using (EscuelaEntities1 db = new EscuelaEntities1())
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                cbmciclo.DataSource = db.Ciclo.ToList();
+                cbmciclo.DataSource = db.Cicloes.ToList();
             }
         }
     }

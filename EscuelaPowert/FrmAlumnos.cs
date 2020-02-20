@@ -25,10 +25,10 @@ namespace EscuelaPowert
 
         private void ReadAl()
         {
-            using (EscuelaEntities1 db = new EscuelaEntities1())
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
                 DateGriAlum.DataSource = db.Alumnos.ToList();
-                CMBCiclo.DataSource = db.Ciclo.ToList();
+                CMBCiclo.DataSource = db.Cicloes.ToList();
             }
         }
     }

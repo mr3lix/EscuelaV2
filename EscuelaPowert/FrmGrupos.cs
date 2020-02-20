@@ -25,15 +25,15 @@ namespace EscuelaPowert
 
         private void LoadData()
         {
-            using (Models.EscuelaEntities2 db = new Models.EscuelaEntities2())
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                dataGridView1.DataSource = db.Grupo.ToList();
+                dataGridView1.DataSource = db.Grupoes.ToList();
             }
         }
 
         private void buscartxt()
         {
-            using (Models.EscuelaEntities2 db = new Models.EscuelaEntities2())
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
                 
                 

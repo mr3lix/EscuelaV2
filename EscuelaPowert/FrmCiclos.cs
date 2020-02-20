@@ -26,9 +26,9 @@ namespace EscuelaPowert
 
         private void loadCiclo()
         {
-            using (Models.EscuelaEntities2 db = new Models.EscuelaEntities2())
+            using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                dataGridView1.DataSource = db.Ciclo.ToList();
+                dataGridView1.DataSource = db.Cicloes.ToList();
             }
         }
     }
