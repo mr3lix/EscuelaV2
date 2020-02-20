@@ -27,7 +27,8 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                DatagridActivi.DataSource = db.Actividades.ToList();
+                var a = from s in db.Actividades select new { s.Actividades_ID, s.Actividades_Nombre, s.Actividad_Descripcion };
+                DatagridActivi.DataSource = a.ToList();
             }
         }
     }
