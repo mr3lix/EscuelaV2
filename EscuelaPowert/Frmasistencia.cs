@@ -34,7 +34,7 @@ namespace EscuelaPowert
                                 select new { A.Alumno_ID, A.Alumno_Nombre, A.Alumno_Apellido, d.Asistencia_Valor };
                 datagridAsus.DataSource = a.ToList();
             }
-            Generar();
+            //Generar();
         }
 
         private void LoadCom()
@@ -111,6 +111,13 @@ namespace EscuelaPowert
                    // Gen(item.Alumno_ID, item.ID_Grupo);
                 }
             }
+        }
+
+        private void datagridAsus_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int v = int.Parse(datagridAsus.Rows[datagridAsus.CurrentRow.Index].Cells[0].Value.ToString());
+            Gen(v);
+            //loadData();
         }
     }
 }

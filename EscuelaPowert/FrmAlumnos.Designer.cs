@@ -52,6 +52,7 @@
             // 
             // DateGriAlum
             // 
+            this.DateGriAlum.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DateGriAlum.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DateGriAlum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DateGriAlum.Location = new System.Drawing.Point(0, 0);

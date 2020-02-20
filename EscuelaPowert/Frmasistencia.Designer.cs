@@ -35,9 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cmbclase = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnallsele = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbclase = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridAsus)).BeginInit();
             this.panel2.SuspendLayout();
@@ -56,6 +56,7 @@
             // 
             // datagridAsus
             // 
+            this.datagridAsus.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagridAsus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridAsus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagridAsus.Location = new System.Drawing.Point(0, 0);
@@ -63,6 +64,7 @@
             this.datagridAsus.Size = new System.Drawing.Size(1276, 440);
             this.datagridAsus.TabIndex = 0;
             this.datagridAsus.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridAsus_CellContentClick);
+            this.datagridAsus.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridAsus_CellEnter);
             // 
             // txtbuscar
             // 
@@ -113,14 +115,15 @@
             this.panel2.Size = new System.Drawing.Size(1160, 62);
             this.panel2.TabIndex = 2;
             // 
-            // cmbclase
+            // btnallsele
             // 
-            this.cmbclase.FormattingEnabled = true;
-            this.cmbclase.Location = new System.Drawing.Point(255, 3);
-            this.cmbclase.Name = "cmbclase";
-            this.cmbclase.Size = new System.Drawing.Size(121, 21);
-            this.cmbclase.TabIndex = 5;
-            this.cmbclase.SelectedIndexChanged += new System.EventHandler(this.cmbclase_SelectedIndexChanged);
+            this.btnallsele.Location = new System.Drawing.Point(707, 26);
+            this.btnallsele.Name = "btnallsele";
+            this.btnallsele.Size = new System.Drawing.Size(75, 23);
+            this.btnallsele.TabIndex = 7;
+            this.btnallsele.Text = "Asistencia all";
+            this.btnallsele.UseVisualStyleBackColor = true;
+            this.btnallsele.Click += new System.EventHandler(this.btnallsele_Click);
             // 
             // label3
             // 
@@ -131,15 +134,14 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Clase:";
             // 
-            // btnallsele
+            // cmbclase
             // 
-            this.btnallsele.Location = new System.Drawing.Point(707, 26);
-            this.btnallsele.Name = "btnallsele";
-            this.btnallsele.Size = new System.Drawing.Size(75, 23);
-            this.btnallsele.TabIndex = 7;
-            this.btnallsele.Text = "Asistencia all";
-            this.btnallsele.UseVisualStyleBackColor = true;
-            this.btnallsele.Click += new System.EventHandler(this.btnallsele_Click);
+            this.cmbclase.FormattingEnabled = true;
+            this.cmbclase.Location = new System.Drawing.Point(255, 3);
+            this.cmbclase.Name = "cmbclase";
+            this.cmbclase.Size = new System.Drawing.Size(121, 21);
+            this.cmbclase.TabIndex = 5;
+            this.cmbclase.SelectedIndexChanged += new System.EventHandler(this.cmbclase_SelectedIndexChanged);
             // 
             // FrmAsistencia
             // 

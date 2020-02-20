@@ -49,6 +49,7 @@
             // 
             // DatagridActivi
             // 
+            this.DatagridActivi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DatagridActivi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DatagridActivi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DatagridActivi.Location = new System.Drawing.Point(0, 0);
