@@ -15,6 +15,7 @@ namespace EscuelaPowert
         public FrmaddGrupo()
         {
             InitializeComponent();
+            loadCiclo();
         }
 
         private void btnAgregarGrupo_Click(object sender, EventArgs e)
@@ -33,7 +34,8 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                cbCiclo.DataSource = db.Cicloes.ToList();
+                var G = from d in db.Cicloes select d.Ciclo_ID;
+                cbCiclo.DataSource = G.ToList();
             }
         }
     }

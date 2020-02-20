@@ -15,6 +15,7 @@ namespace EscuelaPowert
         public FrmGrupos()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void btn_nuevo_Click(object sender, EventArgs e)
@@ -27,7 +28,8 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                dataGridView1.DataSource = db.Grupoes.ToList();
+                var G = from d in db.Grupoes select new { d.Grupo_ID, d.Grupo_Nombre, d.ID_Ciclo };
+                dataGridView1.DataSource = G.ToList();
             }
         }
 
