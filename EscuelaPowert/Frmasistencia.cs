@@ -82,6 +82,11 @@ namespace EscuelaPowert
             }
         }
 
+        private void dd()
+        {
+
+        }
+
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
