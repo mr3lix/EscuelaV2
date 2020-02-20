@@ -16,5 +16,16 @@ namespace EscuelaPowert
         {
             InitializeComponent();
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            using (EscuelaEntities1 db = new EscuelaEntities1())
+            {
+                Actividades A = new Actividades();
+                A.Actividades_Nombre = txtnombre.Text;
+                db.Actividades.Add(A);
+                db.SaveChanges();
+            }
+        }
     }
 }

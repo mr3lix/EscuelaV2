@@ -70,11 +70,11 @@
     <Compile Include="Clase.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="FrmActividades.cs">
+    <Compile Include="FrmActivi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmActividades.Designer.cs">
-      <DependentUpon>FrmActividades.cs</DependentUpon>
+    <Compile Include="FrmActivi.Designer.cs">
+      <DependentUpon>FrmActivi.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAddActi.cs">
       <SubType>Form</SubType>
@@ -240,6 +240,9 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmActivi.resx">
+      <DependentUpon>FrmActivi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddActi.resx">
       <DependentUpon>FrmAddActi.cs</DependentUpon>
     </EmbeddedResource>
