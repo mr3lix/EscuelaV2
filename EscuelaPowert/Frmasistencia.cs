@@ -35,7 +35,6 @@ namespace EscuelaPowert
 
                 datagridAsus.DataSource = a.ToList();
             }
-
             Generar();
         }
 
@@ -82,11 +81,6 @@ namespace EscuelaPowert
             }
         }
 
-        private void dd()
-        {
-
-        }
-
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
@@ -99,14 +93,7 @@ namespace EscuelaPowert
 
         private void datagridAsus_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*using (EscuelaEntitys db = new EscuelaEntitys())
-            {
-                Asistencia A = new Asistencia();
-                A.ID_Alumno = cmbclase.SelectedIndex;
-                A.ID_Clase = cmbclase.SelectedIndex;
-                db.Asistencias.Add(A);
-                db.SaveChanges();
-            }*/
+
         }
 
         private void cmbclase_SelectedIndexChanged(object sender, EventArgs e)

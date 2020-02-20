@@ -74,7 +74,7 @@
             // cbmciclo
             // 
             this.cbmciclo.FormattingEnabled = true;
-            this.cbmciclo.Location = new System.Drawing.Point(66, 0);
+            this.cbmciclo.Location = new System.Drawing.Point(66, 3);
             this.cbmciclo.Name = "cbmciclo";
             this.cbmciclo.Size = new System.Drawing.Size(111, 21);
             this.cbmciclo.TabIndex = 2;
