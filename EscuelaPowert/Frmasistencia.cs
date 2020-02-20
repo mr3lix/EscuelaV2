@@ -35,6 +35,8 @@ namespace EscuelaPowert
 
                 datagridAsus.DataSource = a.ToList();
             }
+
+            Generar();
         }
 
         private void LoadCom()
@@ -59,9 +61,24 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
+                var Al = from N in db.Alumnos where N.ID_Grupo == 1 select N;
+                foreach (var item in Al)
+                {
+                    Gen(item.Alumno_ID, item.ID_Grupo);
+                }
+            }
+        }
+
+        private void Gen(int IDA, int IDG)
+        {
+            using (EscuelaEntitys db = new EscuelaEntitys())
+            {
                 Asistencia A = new Asistencia();
-                var Al = from N in db.Alumnos where N.ID_Grupo == cmbclase.SelectedIndex select N.Alumno_ID;
-                
+                A.Asistencia_Fecha = DateTime.Now;
+                A.ID_Alumno = IDA;
+                A.ID_Clase = IDG;
+                db.Asistencias.Add(A);
+                db.SaveChanges();
             }
         }
 

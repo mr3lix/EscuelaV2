@@ -74,7 +74,7 @@
             // cbmciclo
             // 
             this.cbmciclo.FormattingEnabled = true;
-            this.cbmciclo.Location = new System.Drawing.Point(72, 3);
+            this.cbmciclo.Location = new System.Drawing.Point(66, 0);
             this.cbmciclo.Name = "cbmciclo";
             this.cbmciclo.Size = new System.Drawing.Size(111, 21);
             this.cbmciclo.TabIndex = 2;
@@ -82,7 +82,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 11);
+            this.label1.Location = new System.Drawing.Point(27, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 3;
