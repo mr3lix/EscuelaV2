@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace EscuelaPowert
 {
-    public partial class FrmActividades : Form
+    public partial class FrmActivi : Form
     {
-        public FrmActividades()
+        public FrmActivi()
         {
             InitializeComponent();
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            FrmAddActi F = new FrmAddActi();
+            F.ShowDialog();
         }
     }
 }
