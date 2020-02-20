@@ -76,6 +76,12 @@
     <Compile Include="FrmaddAlu.Designer.cs">
       <DependentUpon>FrmaddAlu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmaddGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmaddGrupo.Designer.cs">
+      <DependentUpon>FrmaddGrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frmaddmate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </Compile>
     <EmbeddedResource Include="FrmaddAlu.resx">
       <DependentUpon>FrmaddAlu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmaddGrupo.resx">
+      <DependentUpon>FrmaddGrupo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frmaddmate.resx">
       <DependentUpon>Frmaddmate.cs</DependentUpon>
