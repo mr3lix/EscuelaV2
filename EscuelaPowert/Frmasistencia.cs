@@ -30,7 +30,7 @@ namespace EscuelaPowert
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
                 var a = from d in db.Asistencias join A in db.Alumnos on d.ID_Alumno 
-                            equals A.Alumno_ID where A.ID_Grupo == cmbclase.SelectedIndex
+                            equals A.Alumno_ID where A.ID_Grupo == 1
                                 select new { A.Alumno_ID, A.Alumno_Nombre, A.Alumno_Apellido };
 
                 datagridAsus.DataSource = a.ToList();
@@ -77,14 +77,14 @@ namespace EscuelaPowert
 
         private void datagridAsus_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            using (EscuelaEntitys db = new EscuelaEntitys())
+            /*using (EscuelaEntitys db = new EscuelaEntitys())
             {
                 Asistencia A = new Asistencia();
                 A.ID_Alumno = cmbclase.SelectedIndex;
                 A.ID_Clase = cmbclase.SelectedIndex;
                 db.Asistencias.Add(A);
                 db.SaveChanges();
-            }
+            }*/
         }
 
         private void cmbclase_SelectedIndexChanged(object sender, EventArgs e)
