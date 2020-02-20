@@ -37,7 +37,7 @@
             // 
             // btnAgregarGrupo
             // 
-            this.btnAgregarGrupo.Location = new System.Drawing.Point(112, 140);
+            this.btnAgregarGrupo.Location = new System.Drawing.Point(125, 138);
             this.btnAgregarGrupo.Name = "btnAgregarGrupo";
             this.btnAgregarGrupo.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarGrupo.TabIndex = 0;
