@@ -16,5 +16,18 @@ namespace EscuelaPowert
         {
             InitializeComponent();
         }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            using (EscuelaEntitys db = new EscuelaEntitys())
+            {
+                Materia M = new Materia();
+                M.Materia_Nombre = txtnombre.Text;
+                M.ID_Plan = cmbplan.SelectedIndex;
+                db.Materias.Add(M);
+                db.SaveChanges();
+            }
+            this.Close();
+        }
     }
 }

@@ -28,7 +28,8 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                dataGridView1.DataSource = from d in db.Materias select d;
+                var b = from d in db.Materias select new { d.Materia_ID, d.Materia_Nombre };
+                dataGridView1.DataSource = b.ToList();
             }
         }
     }
