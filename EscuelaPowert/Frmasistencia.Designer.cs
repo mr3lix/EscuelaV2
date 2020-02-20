@@ -35,6 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbclase = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridAsus)).BeginInit();
             this.panel2.SuspendLayout();
@@ -59,10 +61,11 @@
             this.datagridAsus.Name = "datagridAsus";
             this.datagridAsus.Size = new System.Drawing.Size(1004, 344);
             this.datagridAsus.TabIndex = 0;
+            this.datagridAsus.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridAsus_CellContentClick);
             // 
             // txtbuscar
             // 
-            this.txtbuscar.Location = new System.Drawing.Point(72, 28);
+            this.txtbuscar.Location = new System.Drawing.Point(66, 30);
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(623, 20);
             this.txtbuscar.TabIndex = 0;
@@ -96,6 +99,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.cmbclase);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.cbmciclo);
@@ -105,6 +110,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(888, 62);
             this.panel2.TabIndex = 2;
+            // 
+            // cmbclase
+            // 
+            this.cmbclase.FormattingEnabled = true;
+            this.cmbclase.Location = new System.Drawing.Point(265, 3);
+            this.cmbclase.Name = "cmbclase";
+            this.cmbclase.Size = new System.Drawing.Size(121, 21);
+            this.cmbclase.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(213, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Clase:";
             // 
             // FrmAsistencia
             // 
@@ -132,6 +154,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView datagridAsus;
+        private System.Windows.Forms.ComboBox cmbclase;
+        private System.Windows.Forms.Label label3;
     }
 }
 

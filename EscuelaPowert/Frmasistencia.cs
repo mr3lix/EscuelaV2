@@ -18,6 +18,7 @@ namespace EscuelaPowert
             InitializeComponent();
             loadData();
             LoadCom();
+            LoadClase();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -42,6 +43,15 @@ namespace EscuelaPowert
             }
         }
 
+        private void LoadClase()
+        {
+            using (EscuelaEntitys db = new EscuelaEntitys())
+            {
+                var a = from d in db.Grupoes select d.Grupo_Nombre;
+                cmbclase.DataSource = a.ToList();
+            }
+        }
+
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
@@ -49,6 +59,18 @@ namespace EscuelaPowert
                 var a = from d in db.Alumnos where (d.Alumno_Nombre == txtbuscar.Text) select new { d.Alumno_Nombre };
                 datagridAsus.DataSource = null;
                 datagridAsus.DataSource = a.ToList();
+            }
+        }
+
+        private void datagridAsus_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            using (EscuelaEntitys db = new EscuelaEntitys())
+            {
+                Asistencia A = new Asistencia();
+                A.ID_Alumno = cmbclase.SelectedIndex;
+                A.ID_Clase = cmbclase.SelectedIndex;
+                db.Asistencias.Add(A);
+                db.SaveChanges();
             }
         }
     }
