@@ -21,7 +21,7 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                var s = from d in db.Tipo_Actividad select new { d.Actividad_Nombre };
+                var s = from d in db.Tipo_Actividad select new { d.Actividad_ID };
                 cmbtipo.DataSource = s.ToList();
             }
         }
