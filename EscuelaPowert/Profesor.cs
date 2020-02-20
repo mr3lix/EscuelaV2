@@ -14,10 +14,18 @@ namespace EscuelaPowert
     
     public partial class Profesor
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Profesor()
+        {
+            this.Grupo_Info = new HashSet<Grupo_Info>();
+        }
+    
         public int Profesor_ID { get; set; }
         public string Profesor_Nombre { get; set; }
         public int ID_Grupo { get; set; }
     
         public virtual Grupo Grupo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Grupo_Info> Grupo_Info { get; set; }
     }
 }

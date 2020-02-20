@@ -4,6 +4,8 @@
     <EntitySetMapping Name="Actividades">
       <EntityTypeMapping TypeName="EscuelaModel.Actividades">
         <MappingFragment StoreEntitySet="Actividades">
+          <ScalarProperty Name="ID_Actividad" ColumnName="ID_Actividad" />
+          <ScalarProperty Name="Actividad_Descripcion" ColumnName="Actividad_Descripcion" />
           <ScalarProperty Name="Actividades_ID" ColumnName="Actividades_ID" />
           <ScalarProperty Name="Actividades_Nombre" ColumnName="Actividades_Nombre" />
           <ScalarProperty Name="ID_Clase" ColumnName="ID_Clase" />
@@ -17,7 +19,6 @@
           <ScalarProperty Name="Alumno_Control" ColumnName="Alumno_Control" />
           <ScalarProperty Name="Alumno_Nombre" ColumnName="Alumno_Nombre" />
           <ScalarProperty Name="Alumno_Apellido" ColumnName="Alumno_Apellido" />
-          <ScalarProperty Name="Alumno_Grupo" ColumnName="Alumno_Grupo" />
           <ScalarProperty Name="Alumno_Estado" ColumnName="Alumno_Estado" />
           <ScalarProperty Name="ID_Grupo" ColumnName="ID_Grupo" />
         </MappingFragment>
@@ -80,7 +81,6 @@
         <MappingFragment StoreEntitySet="Profesor">
           <ScalarProperty Name="Profesor_ID" ColumnName="Profesor_ID" />
           <ScalarProperty Name="Profesor_Nombre" ColumnName="Profesor_Nombre" />
-          <ScalarProperty Name="ID_Grupo" ColumnName="ID_Grupo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -92,6 +92,33 @@
           <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
           <ScalarProperty Name="version" ColumnName="version" />
           <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Evaluacion">
+      <EntityTypeMapping TypeName="EscuelaModel.Evaluacion">
+        <MappingFragment StoreEntitySet="Evaluacion">
+          <ScalarProperty Name="ID_Alumno" ColumnName="ID_Alumno" />
+          <ScalarProperty Name="Evalucacion_Total" ColumnName="Evalucacion_Total" />
+          <ScalarProperty Name="Evalucacion_ID" ColumnName="Evalucacion_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupo_Info">
+      <EntityTypeMapping TypeName="EscuelaModel.Grupo_Info">
+        <MappingFragment StoreEntitySet="Grupo_Info">
+          <ScalarProperty Name="ID_Profesor" ColumnName="ID_Profesor" />
+          <ScalarProperty Name="ID_Grupo" ColumnName="ID_Grupo" />
+          <ScalarProperty Name="Info_ID" ColumnName="Info_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Actividad">
+      <EntityTypeMapping TypeName="EscuelaModel.Tipo_Actividad">
+        <MappingFragment StoreEntitySet="Tipo_Actividad">
+          <ScalarProperty Name="Actividad_Porcentaje" ColumnName="Actividad_Porcentaje" />
+          <ScalarProperty Name="Actividad_Nombre" ColumnName="Actividad_Nombre" />
+          <ScalarProperty Name="Actividad_ID" ColumnName="Actividad_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

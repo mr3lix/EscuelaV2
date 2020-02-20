@@ -35,5 +35,8 @@ namespace EscuelaPowert
         public virtual DbSet<Plan_Estudio> Plan_Estudio { get; set; }
         public virtual DbSet<Profesor> Profesor { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Evaluacion> Evaluacion { get; set; }
+        public virtual DbSet<Grupo_Info> Grupo_Info { get; set; }
+        public virtual DbSet<Tipo_Actividad> Tipo_Actividad { get; set; }
     }
 }

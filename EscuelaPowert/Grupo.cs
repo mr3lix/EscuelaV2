@@ -20,6 +20,7 @@ namespace EscuelaPowert
             this.Alumnos = new HashSet<Alumnos>();
             this.Clase = new HashSet<Clase>();
             this.Profesor = new HashSet<Profesor>();
+            this.Grupo_Info = new HashSet<Grupo_Info>();
         }
     
         public int Grupo_ID { get; set; }
@@ -33,5 +34,7 @@ namespace EscuelaPowert
         public virtual ICollection<Clase> Clase { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Profesor> Profesor { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Grupo_Info> Grupo_Info { get; set; }
     }
 }

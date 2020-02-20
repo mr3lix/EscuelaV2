@@ -12,15 +12,12 @@ namespace EscuelaPowert
     using System;
     using System.Collections.Generic;
     
-    public partial class Actividades
+    public partial class Evaluacion
     {
-        public int Actividades_ID { get; set; }
-        public string Actividades_Nombre { get; set; }
-        public int ID_Clase { get; set; }
-        public string Actividad_Descripcion { get; set; }
-        public int ID_Actividad { get; set; }
+        public int Evalucacion_ID { get; set; }
+        public int Evalucacion_Total { get; set; }
+        public int ID_Alumno { get; set; }
     
-        public virtual Clase Clase { get; set; }
-        public virtual Tipo_Actividad Tipo_Actividad { get; set; }
+        public virtual Alumnos Alumnos { get; set; }
     }
 }

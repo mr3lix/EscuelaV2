@@ -12,27 +12,19 @@ namespace EscuelaPowert
     using System;
     using System.Collections.Generic;
     
-    public partial class Alumnos
+    public partial class Tipo_Actividad
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Alumnos()
+        public Tipo_Actividad()
         {
-            this.Asistencia = new HashSet<Asistencia>();
-            this.Evaluacion = new HashSet<Evaluacion>();
+            this.Actividades = new HashSet<Actividades>();
         }
     
-        public int Alumno_ID { get; set; }
-        public int Alumno_Control { get; set; }
-        public string Alumno_Nombre { get; set; }
-        public string Alumno_Apellido { get; set; }
-        public int Alumno_Grupo { get; set; }
-        public bool Alumno_Estado { get; set; }
-        public int ID_Grupo { get; set; }
+        public int Actividad_ID { get; set; }
+        public string Actividad_Nombre { get; set; }
+        public int Actividad_Porcentaje { get; set; }
     
-        public virtual Grupo Grupo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Asistencia> Asistencia { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Evaluacion> Evaluacion { get; set; }
+        public virtual ICollection<Actividades> Actividades { get; set; }
     }
 }

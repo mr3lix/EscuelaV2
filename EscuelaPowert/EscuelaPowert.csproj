@@ -70,6 +70,9 @@
     <Compile Include="Clase.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Evaluacion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="FrmActivi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,10 +121,10 @@
     <Compile Include="FrmCiclos.Designer.cs">
       <DependentUpon>FrmCiclos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Grupos\Clase\Actividad\FrmActividades.cs">
+    <Compile Include="FrmActividades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Grupos\Clase\Actividad\FrmActividades.Designer.cs">
+    <Compile Include="FrmActividades.Designer.cs">
       <DependentUpon>FrmActividades.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAlumnos.cs">
@@ -145,18 +148,15 @@
     <Compile Include="Grupo.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Grupos\Alumnos\Alumnos.cs" />
-    <Compile Include="Grupos\Alumnos\Asistencia\Asistencia.cs" />
-    <Compile Include="Grupos\Ciclo\Ciclo.cs" />
-    <Compile Include="Grupos\Ciclo\Services.cs" />
-    <Compile Include="Grupos\Clase\Actividad\FrmAddAct.cs">
+    <Compile Include="FrmAddAct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Grupos\Clase\Actividad\FrmAddAct.Designer.cs">
+    <Compile Include="FrmAddAct.Designer.cs">
       <DependentUpon>FrmAddAct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Grupos\Clase\Clase.cs" />
-    <Compile Include="Grupos\Profesor\Profesor.cs" />
+    <Compile Include="Grupo_Info.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Materias.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -240,6 +240,9 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Tipo_Actividad.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmActivi.resx">
       <DependentUpon>FrmActivi.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,7 +267,7 @@
     <EmbeddedResource Include="FrmCiclos.resx">
       <DependentUpon>FrmCiclos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Grupos\Clase\Actividad\FrmActividades.resx">
+    <EmbeddedResource Include="FrmActividades.resx">
       <DependentUpon>FrmActividades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAlumnos.resx">
@@ -276,7 +279,7 @@
     <EmbeddedResource Include="FrmMaterias.resx">
       <DependentUpon>FrmMaterias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Grupos\Clase\Actividad\FrmAddAct.resx">
+    <EmbeddedResource Include="FrmAddAct.resx">
       <DependentUpon>FrmAddAct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

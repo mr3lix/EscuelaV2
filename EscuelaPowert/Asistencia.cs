@@ -20,5 +20,6 @@ namespace EscuelaPowert
         public int ID_Clase { get; set; }
     
         public virtual Clase Clase { get; set; }
+        public virtual Alumnos Alumnos { get; set; }
     }
 }
