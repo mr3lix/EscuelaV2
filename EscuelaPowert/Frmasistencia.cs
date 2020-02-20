@@ -30,9 +30,8 @@ namespace EscuelaPowert
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
                 var a = from d in db.Asistencias join A in db.Alumnos on d.ID_Alumno 
-                            equals A.Alumno_ID where A.ID_Grupo == 1
-                                select new { A.Alumno_ID, A.Alumno_Nombre, A.Alumno_Apellido };
-
+                            equals A.Alumno_ID where A.ID_Grupo == 2
+                                select new { A.Alumno_ID, A.Alumno_Nombre, A.Alumno_Apellido, d.Asistencia_Valor };
                 datagridAsus.DataSource = a.ToList();
             }
             Generar();
@@ -60,22 +59,23 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                var Al = from N in db.Alumnos where N.ID_Grupo == 1 select N;
+                var Al = from N in db.Alumnos where N.ID_Grupo == 2 select N;
                 foreach (var item in Al)
                 {
-                    Gen(item.Alumno_ID, item.ID_Grupo);
+                    Gen(item.Alumno_ID);
                 }
             }
         }
 
-        private void Gen(int IDA, int IDG)
+        private void Gen(int IDA)
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
                 Asistencia A = new Asistencia();
                 A.Asistencia_Fecha = DateTime.Now;
                 A.ID_Alumno = IDA;
-                A.ID_Clase = IDG;
+                A.ID_Clase = 1;
+                A.Asistencia_Valor = true;
                 db.Asistencias.Add(A);
                 db.SaveChanges();
             }
@@ -98,7 +98,7 @@ namespace EscuelaPowert
 
         private void cmbclase_SelectedIndexChanged(object sender, EventArgs e)
         {
-            loadData();
+            //loadData();
         }
 
         private void btnallsele_Click(object sender, EventArgs e)
