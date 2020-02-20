@@ -23,6 +23,14 @@
         <AssociationConnector Association="EscuelaModel.FK__Clase__ID_Grupo__47DBAE45" ManuallyRouted="false" />
         <AssociationConnector Association="EscuelaModel.FK__Profesor__ID_Gru__4222D4EF" ManuallyRouted="false" />
         <AssociationConnector Association="EscuelaModel.FK__Materias__ID_Pla__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="EscuelaModel.FK__Asistenci__ID_Al__534D60F1" />
+        <EntityTypeShape EntityType="EscuelaModel.Evaluacion" Width="1.5" PointX="7.5" PointY="2.125" />
+        <EntityTypeShape EntityType="EscuelaModel.Grupo_Info" Width="1.5" PointX="7.5" PointY="10.75" />
+        <EntityTypeShape EntityType="EscuelaModel.Tipo_Actividad" Width="1.5" PointX="5.25" PointY="16" />
+        <AssociationConnector Association="EscuelaModel.FK__Actividad__ID_Ac__5070F446" />
+        <AssociationConnector Association="EscuelaModel.FK__Evaluacio__ID_Al__571DF1D5" />
+        <AssociationConnector Association="EscuelaModel.FK__Grupo_Inf__ID_Gr__440B1D61" />
+        <AssociationConnector Association="EscuelaModel.FK__Grupo_Inf__ID_Pr__44FF419A" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
