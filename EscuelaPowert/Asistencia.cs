@@ -18,6 +18,7 @@ namespace EscuelaPowert
         public System.DateTime Asistencia_Fecha { get; set; }
         public int ID_Alumno { get; set; }
         public int ID_Clase { get; set; }
+        public Nullable<bool> Asistencia_Valor { get; set; }
     
         public virtual Alumno Alumno { get; set; }
         public virtual Clase Clase { get; set; }

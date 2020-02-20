@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EscuelaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EscuelaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Actividades">
           <Key>
             <PropertyRef Name="Actividades_ID" />
@@ -33,6 +33,7 @@
           <Property Name="Asistencia_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Asistencia_Fecha" Type="datetime" Nullable="false" />
           <Property Name="ID_Alumno" Type="int" Nullable="false" />
+          <Property Name="Asistencia_Valor" Type="bit" />
           <Property Name="ID_Clase" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Ciclo">
@@ -139,7 +140,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Asistenci__ID_Al__5441852A">
+        <Association Name="FK__Asistenci__ID_Al__5AEE82B9">
           <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="1" />
           <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -151,7 +152,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Asistenci__ID_Cl__5535A963">
+        <Association Name="FK__Asistenci__ID_Cl__5BE2A6F2">
           <End Role="Clase" Type="Self.Clase" Multiplicity="1" />
           <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -272,11 +273,11 @@
             <End Role="Grupo" EntitySet="Grupo" />
             <End Role="Alumnos" EntitySet="Alumnos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Asistenci__ID_Al__5441852A" Association="Self.FK__Asistenci__ID_Al__5441852A">
+          <AssociationSet Name="FK__Asistenci__ID_Al__5AEE82B9" Association="Self.FK__Asistenci__ID_Al__5AEE82B9">
             <End Role="Alumnos" EntitySet="Alumnos" />
             <End Role="Asistencia" EntitySet="Asistencia" />
           </AssociationSet>
-          <AssociationSet Name="FK__Asistenci__ID_Cl__5535A963" Association="Self.FK__Asistenci__ID_Cl__5535A963">
+          <AssociationSet Name="FK__Asistenci__ID_Cl__5BE2A6F2" Association="Self.FK__Asistenci__ID_Cl__5BE2A6F2">
             <End Role="Clase" EntitySet="Clase" />
             <End Role="Asistencia" EntitySet="Asistencia" />
           </AssociationSet>
@@ -309,8 +310,7 @@
             <End Role="Plan_Estudio" EntitySet="Plan_Estudio" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EscuelaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -350,6 +350,7 @@
           <Property Name="ID_Clase" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Alumno" Relationship="Self.FK__Asistenci__ID_Al__5441852A" FromRole="Asistencia" ToRole="Alumnos" />
           <NavigationProperty Name="Clase" Relationship="Self.FK__Asistenci__ID_Cl__5535A963" FromRole="Asistencia" ToRole="Clase" />
+          <Property Name="Asistencia_Valor" Type="Boolean" />
         </EntityType>
         <EntityType Name="Ciclo">
           <Key>
@@ -674,6 +675,7 @@
           <EntitySetMapping Name="Asistencias">
             <EntityTypeMapping TypeName="EscuelaModel.Asistencia">
               <MappingFragment StoreEntitySet="Asistencia">
+                <ScalarProperty Name="Asistencia_Valor" ColumnName="Asistencia_Valor" />
                 <ScalarProperty Name="Asistencia_ID" ColumnName="Asistencia_ID" />
                 <ScalarProperty Name="Asistencia_Fecha" ColumnName="Asistencia_Fecha" />
                 <ScalarProperty Name="ID_Alumno" ColumnName="ID_Alumno" />
