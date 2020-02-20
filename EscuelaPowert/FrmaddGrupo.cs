@@ -19,7 +19,14 @@ namespace EscuelaPowert
 
         private void btnAgregarGrupo_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Perro");
+            using (EscuelaEntities1 db = new EscuelaEntities1())
+            {
+                Grupo g = new Grupo();
+                g.Grupo_Nombre = txtbGrupoNombre.Text;
+                g.ID_Ciclo = cbCiclo.SelectedIndex;
+                db.Grupo.Add(g);
+                db.SaveChanges();
+            }
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnAgregarGrupo = new System.Windows.Forms.Button();
-            this.txtbGrupo = new System.Windows.Forms.TextBox();
+            this.txtbGrupoNombre = new System.Windows.Forms.TextBox();
             this.cbCiclo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,12 +45,12 @@
             this.btnAgregarGrupo.UseVisualStyleBackColor = true;
             this.btnAgregarGrupo.Click += new System.EventHandler(this.btnAgregarGrupo_Click);
             // 
-            // txtbGrupo
+            // txtbGrupoNombre
             // 
-            this.txtbGrupo.Location = new System.Drawing.Point(125, 50);
-            this.txtbGrupo.Name = "txtbGrupo";
-            this.txtbGrupo.Size = new System.Drawing.Size(121, 20);
-            this.txtbGrupo.TabIndex = 1;
+            this.txtbGrupoNombre.Location = new System.Drawing.Point(125, 50);
+            this.txtbGrupoNombre.Name = "txtbGrupoNombre";
+            this.txtbGrupoNombre.Size = new System.Drawing.Size(121, 20);
+            this.txtbGrupoNombre.TabIndex = 1;
             // 
             // cbCiclo
             // 
@@ -86,7 +86,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbCiclo);
-            this.Controls.Add(this.txtbGrupo);
+            this.Controls.Add(this.txtbGrupoNombre);
             this.Controls.Add(this.btnAgregarGrupo);
             this.Name = "FrmaddGrupo";
             this.Text = "FrmaddGrupo";
@@ -98,7 +98,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnAgregarGrupo;
-        private System.Windows.Forms.TextBox txtbGrupo;
+        private System.Windows.Forms.TextBox txtbGrupoNombre;
         private System.Windows.Forms.ComboBox cbCiclo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

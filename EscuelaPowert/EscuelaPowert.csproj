@@ -132,7 +132,6 @@
       <DependentUpon>FrmAddAct.cs</DependentUpon>
     </Compile>
     <Compile Include="Grupos\Clase\Clase.cs" />
-    <Compile Include="Grupos\Grupo.cs" />
     <Compile Include="Grupos\Profesor\Profesor.cs" />
     <Compile Include="Materias.cs">
       <DependentUpon>Model1.tt</DependentUpon>
