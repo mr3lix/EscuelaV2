@@ -2,18 +2,18 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="EscuelaModelStoreContainer" CdmEntityContainer="EscuelaEntities1">
     <EntitySetMapping Name="Actividades">
-      <EntityTypeMapping TypeName="EscuelaModel.Actividades">
+      <EntityTypeMapping TypeName="IsTypeOf(EscuelaModel.Actividades)">
         <MappingFragment StoreEntitySet="Actividades">
-          <ScalarProperty Name="ID_Actividad" ColumnName="ID_Actividad" />
-          <ScalarProperty Name="Actividad_Descripcion" ColumnName="Actividad_Descripcion" />
           <ScalarProperty Name="Actividades_ID" ColumnName="Actividades_ID" />
           <ScalarProperty Name="Actividades_Nombre" ColumnName="Actividades_Nombre" />
           <ScalarProperty Name="ID_Clase" ColumnName="ID_Clase" />
+          <ScalarProperty Name="Actividad_Descripcion" ColumnName="Actividad_Descripcion" />
+          <ScalarProperty Name="ID_Actividad" ColumnName="ID_Actividad" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Alumnos">
-      <EntityTypeMapping TypeName="EscuelaModel.Alumnos">
+      <EntityTypeMapping TypeName="IsTypeOf(EscuelaModel.Alumnos)">
         <MappingFragment StoreEntitySet="Alumnos">
           <ScalarProperty Name="Alumno_ID" ColumnName="Alumno_ID" />
           <ScalarProperty Name="Alumno_Control" ColumnName="Alumno_Control" />
@@ -25,7 +25,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Asistencia">
-      <EntityTypeMapping TypeName="EscuelaModel.Asistencia">
+      <EntityTypeMapping TypeName="IsTypeOf(EscuelaModel.Asistencia)">
         <MappingFragment StoreEntitySet="Asistencia">
           <ScalarProperty Name="Asistencia_ID" ColumnName="Asistencia_ID" />
           <ScalarProperty Name="Asistencia_Fecha" ColumnName="Asistencia_Fecha" />
@@ -35,7 +35,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Ciclo">
-      <EntityTypeMapping TypeName="EscuelaModel.Ciclo">
+      <EntityTypeMapping TypeName="IsTypeOf(EscuelaModel.Ciclo)">
         <MappingFragment StoreEntitySet="Ciclo">
           <ScalarProperty Name="Ciclo_ID" ColumnName="Ciclo_ID" />
           <ScalarProperty Name="Ciclo_Ano" ColumnName="Ciclo_Ano" />
@@ -43,7 +43,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Clase">
-      <EntityTypeMapping TypeName="EscuelaModel.Clase">
+      <EntityTypeMapping TypeName="IsTypeOf(EscuelaModel.Clase)">
         <MappingFragment StoreEntitySet="Clase">
           <ScalarProperty Name="Clase_ID" ColumnName="Clase_ID" />
           <ScalarProperty Name="ID_Grupo" ColumnName="ID_Grupo" />
@@ -51,7 +51,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Grupo">
-      <EntityTypeMapping TypeName="EscuelaModel.Grupo">
+      <EntityTypeMapping TypeName="IsTypeOf(EscuelaModel.Grupo)">
         <MappingFragment StoreEntitySet="Grupo">
           <ScalarProperty Name="Grupo_ID" ColumnName="Grupo_ID" />
           <ScalarProperty Name="Grupo_Nombre" ColumnName="Grupo_Nombre" />
@@ -60,7 +60,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Materias">
-      <EntityTypeMapping TypeName="EscuelaModel.Materias">
+      <EntityTypeMapping TypeName="IsTypeOf(EscuelaModel.Materias)">
         <MappingFragment StoreEntitySet="Materias">
           <ScalarProperty Name="Materia_ID" ColumnName="Materia_ID" />
           <ScalarProperty Name="Materia_Nombre" ColumnName="Materia_Nombre" />
@@ -69,7 +69,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Plan_Estudio">
-      <EntityTypeMapping TypeName="EscuelaModel.Plan_Estudio">
+      <EntityTypeMapping TypeName="IsTypeOf(EscuelaModel.Plan_Estudio)">
         <MappingFragment StoreEntitySet="Plan_Estudio">
           <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
           <ScalarProperty Name="ID_Ciclo" ColumnName="ID_Ciclo" />
@@ -77,48 +77,37 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Profesor">
-      <EntityTypeMapping TypeName="EscuelaModel.Profesor">
+      <EntityTypeMapping TypeName="IsTypeOf(EscuelaModel.Profesor)">
         <MappingFragment StoreEntitySet="Profesor">
           <ScalarProperty Name="Profesor_ID" ColumnName="Profesor_ID" />
           <ScalarProperty Name="Profesor_Nombre" ColumnName="Profesor_Nombre" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="EscuelaModel.sysdiagrams">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Evaluacion">
-      <EntityTypeMapping TypeName="EscuelaModel.Evaluacion">
+      <EntityTypeMapping TypeName="IsTypeOf(EscuelaModel.Evaluacion)">
         <MappingFragment StoreEntitySet="Evaluacion">
-          <ScalarProperty Name="ID_Alumno" ColumnName="ID_Alumno" />
-          <ScalarProperty Name="Evalucacion_Total" ColumnName="Evalucacion_Total" />
           <ScalarProperty Name="Evalucacion_ID" ColumnName="Evalucacion_ID" />
+          <ScalarProperty Name="Evalucacion_Total" ColumnName="Evalucacion_Total" />
+          <ScalarProperty Name="ID_Alumno" ColumnName="ID_Alumno" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Grupo_Info">
-      <EntityTypeMapping TypeName="EscuelaModel.Grupo_Info">
+      <EntityTypeMapping TypeName="IsTypeOf(EscuelaModel.Grupo_Info)">
         <MappingFragment StoreEntitySet="Grupo_Info">
-          <ScalarProperty Name="ID_Profesor" ColumnName="ID_Profesor" />
-          <ScalarProperty Name="ID_Grupo" ColumnName="ID_Grupo" />
           <ScalarProperty Name="Info_ID" ColumnName="Info_ID" />
+          <ScalarProperty Name="ID_Grupo" ColumnName="ID_Grupo" />
+          <ScalarProperty Name="ID_Profesor" ColumnName="ID_Profesor" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Tipo_Actividad">
-      <EntityTypeMapping TypeName="EscuelaModel.Tipo_Actividad">
+      <EntityTypeMapping TypeName="IsTypeOf(EscuelaModel.Tipo_Actividad)">
         <MappingFragment StoreEntitySet="Tipo_Actividad">
-          <ScalarProperty Name="Actividad_Porcentaje" ColumnName="Actividad_Porcentaje" />
-          <ScalarProperty Name="Actividad_Nombre" ColumnName="Actividad_Nombre" />
           <ScalarProperty Name="Actividad_ID" ColumnName="Actividad_ID" />
+          <ScalarProperty Name="Actividad_Nombre" ColumnName="Actividad_Nombre" />
+          <ScalarProperty Name="Actividad_Porcentaje" ColumnName="Actividad_Porcentaje" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

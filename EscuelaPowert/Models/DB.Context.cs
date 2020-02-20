@@ -13,10 +13,10 @@ namespace EscuelaPowert.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EscuelaEntity : DbContext
+    public partial class EscuelaEntities2 : DbContext
     {
-        public EscuelaEntity()
-            : base("name=EscuelaEntity")
+        public EscuelaEntities2()
+            : base("name=EscuelaEntities2")
         {
         }
     
@@ -36,7 +36,6 @@ namespace EscuelaPowert.Models
         public virtual DbSet<Materias> Materias { get; set; }
         public virtual DbSet<Plan_Estudio> Plan_Estudio { get; set; }
         public virtual DbSet<Profesor> Profesor { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tipo_Actividad> Tipo_Actividad { get; set; }
     }
 }

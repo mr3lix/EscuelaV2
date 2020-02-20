@@ -8,7 +8,7 @@
     <Property Name="Actividades_Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ID_Clase" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Clase" Relationship="Self.FK__Actividad__ID_Cl__4AB81AF0" FromRole="Actividades" ToRole="Clase" />
-    <Property Name="Actividad_Descripcion" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Actividad_Descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
     <Property Name="ID_Actividad" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Tipo_Actividad" Relationship="EscuelaModel.FK__Actividad__ID_Ac__5070F446" FromRole="Actividades" ToRole="Tipo_Actividad" />
   </EntityType>

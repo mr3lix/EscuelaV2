@@ -15,12 +15,21 @@ namespace EscuelaPowert
         public FrmCiclos()
         {
             InitializeComponent();
+            loadCiclo();
         }
 
         private void btnAgregarCiclo_Click(object sender, EventArgs e)
         {
             FrmaddCiclo add = new FrmaddCiclo();
             add.ShowDialog();
+        }
+
+        private void loadCiclo()
+        {
+            using (EscuelaEntities1 db = new EscuelaEntities1())
+            {
+                dataGridView1.DataSource = db.Ciclo.ToList();
+            }
         }
     }
 }
