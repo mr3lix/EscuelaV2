@@ -33,7 +33,7 @@ namespace EscuelaPowert
                 Actividade A = new Actividade();
                 A.Actividades_Nombre = txt_name.Text;
                 A.Actividad_Descripcion = txtdescrip.Text;
-                A.Tipo_Actividad = cmbtipo.SelectedIndex;
+                A.ID_Actividad = cmbtipo.SelectedIndex;
                 db.Actividades.Add(A);
                 db.SaveChanges();
             }
