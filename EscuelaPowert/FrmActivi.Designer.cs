@@ -29,23 +29,32 @@
         private void InitializeComponent()
         {
             this.pnlabajo = new System.Windows.Forms.Panel();
+            this.DatagridActivi = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnadd = new System.Windows.Forms.Button();
             this.txtbuscar = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnadd = new System.Windows.Forms.Button();
             this.pnlabajo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DatagridActivi)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlabajo
             // 
-            this.pnlabajo.Controls.Add(this.dataGridView1);
+            this.pnlabajo.Controls.Add(this.DatagridActivi);
             this.pnlabajo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlabajo.Location = new System.Drawing.Point(0, 106);
             this.pnlabajo.Name = "pnlabajo";
             this.pnlabajo.Size = new System.Drawing.Size(762, 270);
             this.pnlabajo.TabIndex = 0;
+            // 
+            // DatagridActivi
+            // 
+            this.DatagridActivi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DatagridActivi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DatagridActivi.Location = new System.Drawing.Point(0, 0);
+            this.DatagridActivi.Name = "DatagridActivi";
+            this.DatagridActivi.Size = new System.Drawing.Size(762, 270);
+            this.DatagridActivi.TabIndex = 0;
             // 
             // panel1
             // 
@@ -57,6 +66,13 @@
             this.panel1.Size = new System.Drawing.Size(762, 48);
             this.panel1.TabIndex = 1;
             // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(105, 15);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(546, 20);
+            this.txtbuscar.TabIndex = 1;
+            // 
             // btnadd
             // 
             this.btnadd.Location = new System.Drawing.Point(4, 13);
@@ -66,22 +82,6 @@
             this.btnadd.Text = "Nuevo";
             this.btnadd.UseVisualStyleBackColor = true;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
-            // 
-            // txtbuscar
-            // 
-            this.txtbuscar.Location = new System.Drawing.Point(105, 15);
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(546, 20);
-            this.txtbuscar.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(762, 270);
-            this.dataGridView1.TabIndex = 0;
             // 
             // FrmActivi
             // 
@@ -93,9 +93,9 @@
             this.Name = "FrmActivi";
             this.Text = "Actividades";
             this.pnlabajo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DatagridActivi)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,6 +106,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Button btnadd;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DatagridActivi;
     }
 }

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.datagridAsus = new System.Windows.Forms.DataGridView();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
+            this.cbmciclo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridAsus)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -45,26 +45,35 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.datagridAsus);
             this.panel1.Location = new System.Drawing.Point(0, 68);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1004, 344);
             this.panel1.TabIndex = 1;
             // 
-            // textBox1
+            // datagridAsus
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(623, 20);
-            this.textBox1.TabIndex = 0;
+            this.datagridAsus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridAsus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datagridAsus.Location = new System.Drawing.Point(0, 0);
+            this.datagridAsus.Name = "datagridAsus";
+            this.datagridAsus.Size = new System.Drawing.Size(1004, 344);
+            this.datagridAsus.TabIndex = 0;
             // 
-            // comboBox1
+            // txtbuscar
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(72, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(111, 21);
-            this.comboBox1.TabIndex = 2;
+            this.txtbuscar.Location = new System.Drawing.Point(72, 28);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(623, 20);
+            this.txtbuscar.TabIndex = 0;
+            // 
+            // cbmciclo
+            // 
+            this.cbmciclo.FormattingEnabled = true;
+            this.cbmciclo.Location = new System.Drawing.Point(72, 3);
+            this.cbmciclo.Name = "cbmciclo";
+            this.cbmciclo.Size = new System.Drawing.Size(111, 21);
+            this.cbmciclo.TabIndex = 2;
             // 
             // label1
             // 
@@ -88,22 +97,13 @@
             // 
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.cbmciclo);
+            this.panel2.Controls.Add(this.txtbuscar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(888, 62);
             this.panel2.TabIndex = 2;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1004, 344);
-            this.dataGridView1.TabIndex = 0;
             // 
             // FrmAsistencia
             // 
@@ -116,21 +116,21 @@
             this.Text = "Asistencia";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datagridAsus)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtbuscar;
+        private System.Windows.Forms.ComboBox cbmciclo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView datagridAsus;
     }
 }
 

@@ -22,5 +22,13 @@ namespace EscuelaPowert
             FrmAddActi F = new FrmAddActi();
             F.ShowDialog();
         }
+
+        private void LoadActivi()
+        {
+            using (EscuelaEntities1 db = new EscuelaEntities1())
+            {
+                DatagridActivi.DataSource = db.Actividades.ToList();
+            }
+        }
     }
 }
