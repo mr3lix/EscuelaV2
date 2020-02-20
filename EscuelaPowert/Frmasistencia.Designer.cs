@@ -66,6 +66,7 @@
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(623, 20);
             this.txtbuscar.TabIndex = 0;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // cbmciclo
             // 

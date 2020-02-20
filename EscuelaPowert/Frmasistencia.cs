@@ -16,6 +16,8 @@ namespace EscuelaPowert
         public FrmAsistencia()
         {
             InitializeComponent();
+            loadData();
+            LoadCom();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -26,8 +28,8 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                var a = from d in db.Asistencias select new { d.ID_Alumno, d.ID_Clase };
-                datagridAsus.DataSource = db.Asistencias.ToList();
+                var a = from d in db.Asistencias select new { d.ID_Alumno, d.ID_Clase,d.Alumno.Alumno_Nombre };
+                datagridAsus.DataSource = a.ToList();
             }
         }
 
@@ -35,7 +37,18 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                cbmciclo.DataSource = db.Cicloes.ToList();
+                var a = from d in db.Cicloes select d.Ciclo_Ano;
+                cbmciclo.DataSource = a.ToList();
+            }
+        }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+            using (EscuelaEntitys db = new EscuelaEntitys())
+            {
+                var a = from d in db.Alumnos where (d.Alumno_Nombre == txtbuscar.Text) select new { d.Alumno_Nombre };
+                datagridAsus.DataSource = null;
+                datagridAsus.DataSource = a.ToList();
             }
         }
     }
