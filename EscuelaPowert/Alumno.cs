@@ -25,7 +25,7 @@ namespace EscuelaPowert
         public int Alumno_Control { get; set; }
         public string Alumno_Nombre { get; set; }
         public string Alumno_Apellido { get; set; }
-        public bool Alumno_Estado { get; set; }
+        public Nullable<bool> Alumno_Estado { get; set; }
         public int ID_Grupo { get; set; }
     
         public virtual Grupo Grupo { get; set; }

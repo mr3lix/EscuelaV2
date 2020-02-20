@@ -37,6 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbclase = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnallsele = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridAsus)).BeginInit();
             this.panel2.SuspendLayout();
@@ -99,6 +100,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnallsele);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.cmbclase);
             this.panel2.Controls.Add(this.label2);
@@ -129,6 +131,16 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Clase:";
             // 
+            // btnallsele
+            // 
+            this.btnallsele.Location = new System.Drawing.Point(707, 26);
+            this.btnallsele.Name = "btnallsele";
+            this.btnallsele.Size = new System.Drawing.Size(75, 23);
+            this.btnallsele.TabIndex = 7;
+            this.btnallsele.Text = "Asistencia all";
+            this.btnallsele.UseVisualStyleBackColor = true;
+            this.btnallsele.Click += new System.EventHandler(this.btnallsele_Click);
+            // 
             // FrmAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +169,7 @@
         private System.Windows.Forms.DataGridView datagridAsus;
         private System.Windows.Forms.ComboBox cmbclase;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnallsele;
     }
 }
 

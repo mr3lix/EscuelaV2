@@ -23,7 +23,7 @@
           <Property Name="Alumno_Control" Type="int" Nullable="false" />
           <Property Name="Alumno_Nombre" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Alumno_Apellido" Type="varchar" MaxLength="40" Nullable="false" />
-          <Property Name="Alumno_Estado" Type="bit" Nullable="false" />
+          <Property Name="Alumno_Estado" Type="bit" />
           <Property Name="ID_Grupo" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Asistencia">
@@ -42,6 +42,8 @@
           </Key>
           <Property Name="Ciclo_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Ciclo_Ano" Type="datetime" Nullable="false" />
+          <Property Name="Ciclo_Inicio" Type="datetime" />
+          <Property Name="Ciclo_Final" Type="datetime" />
         </EntityType>
         <EntityType Name="Clase">
           <Key>
@@ -140,7 +142,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Asistenci__ID_Al__5AEE82B9">
+        <Association Name="FK__Asistenci__ID_Al__534D60F1">
           <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="1" />
           <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -152,7 +154,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Asistenci__ID_Cl__5BE2A6F2">
+        <Association Name="FK__Asistenci__ID_Cl__5441852A">
           <End Role="Clase" Type="Self.Clase" Multiplicity="1" />
           <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -176,7 +178,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Evaluacio__ID_Al__5812160E">
+        <Association Name="FK__Evaluacio__ID_Al__571DF1D5">
           <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="1" />
           <End Role="Evaluacion" Type="Self.Evaluacion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -273,11 +275,11 @@
             <End Role="Grupo" EntitySet="Grupo" />
             <End Role="Alumnos" EntitySet="Alumnos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Asistenci__ID_Al__5AEE82B9" Association="Self.FK__Asistenci__ID_Al__5AEE82B9">
+          <AssociationSet Name="FK__Asistenci__ID_Al__534D60F1" Association="Self.FK__Asistenci__ID_Al__534D60F1">
             <End Role="Alumnos" EntitySet="Alumnos" />
             <End Role="Asistencia" EntitySet="Asistencia" />
           </AssociationSet>
-          <AssociationSet Name="FK__Asistenci__ID_Cl__5BE2A6F2" Association="Self.FK__Asistenci__ID_Cl__5BE2A6F2">
+          <AssociationSet Name="FK__Asistenci__ID_Cl__5441852A" Association="Self.FK__Asistenci__ID_Cl__5441852A">
             <End Role="Clase" EntitySet="Clase" />
             <End Role="Asistencia" EntitySet="Asistencia" />
           </AssociationSet>
@@ -285,7 +287,7 @@
             <End Role="Grupo" EntitySet="Grupo" />
             <End Role="Clase" EntitySet="Clase" />
           </AssociationSet>
-          <AssociationSet Name="FK__Evaluacio__ID_Al__5812160E" Association="Self.FK__Evaluacio__ID_Al__5812160E">
+          <AssociationSet Name="FK__Evaluacio__ID_Al__571DF1D5" Association="Self.FK__Evaluacio__ID_Al__571DF1D5">
             <End Role="Alumnos" EntitySet="Alumnos" />
             <End Role="Evaluacion" EntitySet="Evaluacion" />
           </AssociationSet>
@@ -334,7 +336,7 @@
           <Property Name="Alumno_Control" Type="Int32" Nullable="false" />
           <Property Name="Alumno_Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Alumno_Apellido" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Alumno_Estado" Type="Boolean" Nullable="false" />
+          <Property Name="Alumno_Estado" Type="Boolean" />
           <Property Name="ID_Grupo" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Grupo" Relationship="Self.FK__Alumnos__ID_Grup__47DBAE45" FromRole="Alumnos" ToRole="Grupo" />
           <NavigationProperty Name="Asistencias" Relationship="Self.FK__Asistenci__ID_Al__5441852A" FromRole="Alumnos" ToRole="Asistencia" />
@@ -360,6 +362,8 @@
           <Property Name="Ciclo_Ano" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Grupoes" Relationship="Self.FK__Grupo__ID_Ciclo__3F466844" FromRole="Ciclo" ToRole="Grupo" />
           <NavigationProperty Name="Plan_Estudio" Relationship="Self.FK__Plan_Estu__ID_Ci__398D8EEE" FromRole="Ciclo" ToRole="Plan_Estudio" />
+          <Property Name="Ciclo_Inicio" Type="DateTime" Precision="3" />
+          <Property Name="Ciclo_Final" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Clase">
           <Key>
@@ -686,6 +690,8 @@
           <EntitySetMapping Name="Cicloes">
             <EntityTypeMapping TypeName="EscuelaModel.Ciclo">
               <MappingFragment StoreEntitySet="Ciclo">
+                <ScalarProperty Name="Ciclo_Final" ColumnName="Ciclo_Final" />
+                <ScalarProperty Name="Ciclo_Inicio" ColumnName="Ciclo_Inicio" />
                 <ScalarProperty Name="Ciclo_ID" ColumnName="Ciclo_ID" />
                 <ScalarProperty Name="Ciclo_Ano" ColumnName="Ciclo_Ano" />
               </MappingFragment>

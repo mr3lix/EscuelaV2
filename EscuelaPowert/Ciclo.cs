@@ -23,6 +23,8 @@ namespace EscuelaPowert
     
         public int Ciclo_ID { get; set; }
         public System.DateTime Ciclo_Ano { get; set; }
+        public Nullable<System.DateTime> Ciclo_Inicio { get; set; }
+        public Nullable<System.DateTime> Ciclo_Final { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Grupo> Grupoes { get; set; }
