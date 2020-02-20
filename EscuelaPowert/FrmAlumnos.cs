@@ -27,9 +27,9 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-             //   var l = from d in db.Alumnos select d;
-               // DateGriAlum.DataSource = l.ToList();
-                var c = from d in db.Cicloes select d;
+                var l = from d in db.Alumnos select d.Alumno_Nombre;
+                DateGriAlum.DataSource = l.ToList();
+                var c = from d in db.Cicloes select d.Ciclo_Ano;
                 CMBCiclo.DataSource = c.ToList();
             }
         }
