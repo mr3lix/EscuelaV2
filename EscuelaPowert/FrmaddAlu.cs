@@ -29,7 +29,7 @@ namespace EscuelaPowert
                     A.Alumno_Apellido = txtapellido.Text;
                     A.Alumno_Control = int.Parse(txtmatricula.Text);
                     A.Alumno_Estado = true;
-                    A.ID_Grupo = 1;
+                    A.ID_Grupo = 2;
                     db.Alumnos.Add(A);
                     db.SaveChanges();
                 }

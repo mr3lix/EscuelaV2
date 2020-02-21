@@ -35,7 +35,7 @@ namespace EscuelaPowert
                                 select new { A.Alumno_ID, A.Alumno_Nombre, A.Alumno_Apellido, d.Asistencia_Valor };
                 datagridAsus.DataSource = a.ToList();
             }
-            //Generar();
+            Generar();
         }
 
         private void LoadCom()
