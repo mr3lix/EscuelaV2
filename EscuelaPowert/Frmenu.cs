@@ -28,5 +28,23 @@ namespace EscuelaPowert
             FrmAsistencia A = new FrmAsistencia();
             A.ShowDialog();
         }
+
+        private void btngrupo_Click(object sender, EventArgs e)
+        {
+            FrmGrupos A = new FrmGrupos();
+            A.ShowDialog();
+        }
+
+        private void btnmaterias_Click(object sender, EventArgs e)
+        {
+            FrmMaterias A = new FrmMaterias();
+            A.ShowDialog();
+        }
+
+        private void btnactividades_Click(object sender, EventArgs e)
+        {
+            FrmActividades A = new FrmActividades();
+            A.ShowDialog();
+        }
     }
 }

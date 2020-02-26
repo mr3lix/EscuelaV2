@@ -18,7 +18,7 @@ namespace EscuelaPowert
             InitializeComponent();
             LoadCom();
             LoadClase();
-            loadData();
+            Verificar();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -32,10 +32,9 @@ namespace EscuelaPowert
             {
                 var a = from d in db.Asistencias join A in db.Alumnos on d.ID_Alumno 
                             equals A.Alumno_ID where A.ID_Grupo == 2
-                                select new { A.Alumno_ID, A.Alumno_Nombre, A.Alumno_Apellido, d.Asistencia_Valor };
+                                select new { A.Alumno_ID, A.Alumno_Nombre, A.Alumno_Apellido, d.Asistencia_Fecha, d.Asistencia_Valor };
                 datagridAsus.DataSource = a.ToList();
             }
-            Generar();
         }
 
         private void LoadCom()
@@ -66,6 +65,24 @@ namespace EscuelaPowert
                     Gen(item.Alumno_ID);
                 }
             }
+            loadData();
+        }
+
+        private void Verificar()
+        {
+            using (EscuelaEntitys db = new EscuelaEntitys())
+            {
+                var fecha = DateTime.Now.Date;
+                var a = from d in db.Asistencias where d.Asistencia_Fecha == fecha select d;
+                if (a.ToList().Count >= 1)
+                {
+                    loadData();
+                }
+                else
+                {
+                    Generar();
+                }
+            }
         }
 
         private void Gen(int IDA)
@@ -73,10 +90,10 @@ namespace EscuelaPowert
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
                 Asistencia A = new Asistencia();
-                A.Asistencia_Fecha = DateTime.Now;
+                A.Asistencia_Fecha = DateTime.Now.Date;
                 A.ID_Alumno = IDA;
                 A.ID_Clase = 1;
-                A.Asistencia_Valor = true;
+                A.Asistencia_Valor = null;
                 db.Asistencias.Add(A);
                 db.SaveChanges();
             }
@@ -86,7 +103,7 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                var a = from d in db.Alumnos where (d.Alumno_Nombre == txtbuscar.Text) select new { d.Alumno_Nombre };
+                var a = from d in db.Alumnos where d.Alumno_Nombre.Contains(txtbuscar.Text) select new { d.Alumno_ID, d.Alumno_Nombre, d.Alumno_Apellido, d.Alumno_Control };
                 datagridAsus.DataSource = null;
                 datagridAsus.DataSource = a.ToList();
             }
@@ -94,7 +111,8 @@ namespace EscuelaPowert
 
         private void datagridAsus_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            //int v = int.Parse(datagridAsus.Rows[datagridAsus.CurrentRow.Index].Cells[0].Value.ToString());
+            //MessageBox.Show(v.ToString());
         }
 
         private void cmbclase_SelectedIndexChanged(object sender, EventArgs e)
@@ -106,19 +124,41 @@ namespace EscuelaPowert
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                var Al = from N in db.Alumnos where N.ID_Grupo == 1 select N;
+                List<Asistencia> Al = (from N in db.Asistencias where N.ID_Clase == 1 select N).ToList();
                 foreach (var item in Al)
                 {
-                   // Gen(item.Alumno_ID, item.ID_Grupo);
-                }
+                    item.Asistencia_Valor = true;
+                }    
+                    db.SaveChanges();
             }
+            loadData();
         }
 
         private void datagridAsus_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            int v = int.Parse(datagridAsus.Rows[datagridAsus.CurrentRow.Index].Cells[0].Value.ToString());
-            Gen(v);
+            //int v = int.Parse(datagridAsus.Rows[datagridAsus.CurrentRow.Index].Cells[0].Value.ToString());
+            //MessageBox.Show(v.ToString());
+           // Gen(v);
             //loadData();
+        }
+
+        private void datagridAsus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Space)
+            {
+                int v = int.Parse(datagridAsus.Rows[datagridAsus.CurrentRow.Index].Cells[0].Value.ToString());
+                using (EscuelaEntitys db = new EscuelaEntitys())
+                {
+                    var a = DateTime.Now.Date;
+                    List<Asistencia> Al = (from N in db.Asistencias where N.ID_Alumno == v && N.Asistencia_Fecha == a select N).ToList();
+                    foreach (var item in Al)
+                    {
+                        item.Asistencia_Valor = true;
+                    }
+                    db.SaveChanges();
+                }
+                loadData();
+            }
         }
     }
 }

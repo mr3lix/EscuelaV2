@@ -15,6 +15,7 @@ namespace EscuelaPowert
         public FrmAddActi()
         {
             InitializeComponent();
+            load();
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -23,8 +24,18 @@ namespace EscuelaPowert
             {
                 Actividade A = new Actividade();
                 A.Actividades_Nombre = txtnombre.Text;
+                A.Tipo_Actividad = (Tipo_Actividad)cmbtipo.SelectedItem;
                 db.Actividades.Add(A);
                 db.SaveChanges();
+            }
+        }
+
+        private void load()
+        {
+            using (EscuelaEntitys db = new EscuelaEntitys())
+            {
+                var T = from A in db.Tipo_Actividad select new { A.Actividad_Nombre };
+                cmbtipo.DataSource = T.ToList();
             }
         }
     }

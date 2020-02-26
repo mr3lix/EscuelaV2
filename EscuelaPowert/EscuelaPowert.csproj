@@ -242,6 +242,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -281,6 +282,12 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\actividad.png" />
+    <None Include="Resources\grupo.png" />
+    <None Include="Resources\ex-alumnos.png" />
+    <None Include="Resources\lista-de-verificacion %282%29.png" />
+    <None Include="Resources\lista-de-verificacion %281%29.png" />
+    <None Include="Resources\lista-de-verificacion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

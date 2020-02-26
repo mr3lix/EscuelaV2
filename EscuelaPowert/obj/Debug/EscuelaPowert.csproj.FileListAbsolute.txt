@@ -49,6 +49,7 @@ C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.F
 C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.FrmCiclos.resources
 C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.FrmActividades.resources
 C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.FrmAlumnos.resources
+C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.Frmenu.resources
 C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.FrmGrupos.resources
 C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.FrmMaterias.resources
 C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.FrmAddAct.resources
@@ -58,4 +59,3 @@ C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.c
 C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.exe
 C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.pdb
 C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.csprojAssemblyReference.cache
-C:\Users\Roberto\Source\Repos\EscuelaV23\EscuelaPowert\obj\Debug\EscuelaPowert.Frmenu.resources

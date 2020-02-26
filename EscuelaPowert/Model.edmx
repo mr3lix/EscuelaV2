@@ -31,7 +31,7 @@
             <PropertyRef Name="Asistencia_ID" />
           </Key>
           <Property Name="Asistencia_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Asistencia_Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Asistencia_Fecha" Type="date" Nullable="false" />
           <Property Name="ID_Alumno" Type="int" Nullable="false" />
           <Property Name="Asistencia_Valor" Type="bit" />
           <Property Name="ID_Clase" Type="int" Nullable="false" />
@@ -142,7 +142,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Asistenci__ID_Al__534D60F1">
+        <Association Name="FK__Asistenci__ID_Al__60A75C0F">
           <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="1" />
           <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -154,7 +154,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Asistenci__ID_Cl__5441852A">
+        <Association Name="FK__Asistenci__ID_Cl__619B8048">
           <End Role="Clase" Type="Self.Clase" Multiplicity="1" />
           <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -275,11 +275,11 @@
             <End Role="Grupo" EntitySet="Grupo" />
             <End Role="Alumnos" EntitySet="Alumnos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Asistenci__ID_Al__534D60F1" Association="Self.FK__Asistenci__ID_Al__534D60F1">
+          <AssociationSet Name="FK__Asistenci__ID_Al__60A75C0F" Association="Self.FK__Asistenci__ID_Al__60A75C0F">
             <End Role="Alumnos" EntitySet="Alumnos" />
             <End Role="Asistencia" EntitySet="Asistencia" />
           </AssociationSet>
-          <AssociationSet Name="FK__Asistenci__ID_Cl__5441852A" Association="Self.FK__Asistenci__ID_Cl__5441852A">
+          <AssociationSet Name="FK__Asistenci__ID_Cl__619B8048" Association="Self.FK__Asistenci__ID_Cl__619B8048">
             <End Role="Clase" EntitySet="Clase" />
             <End Role="Asistencia" EntitySet="Asistencia" />
           </AssociationSet>
@@ -347,7 +347,7 @@
             <PropertyRef Name="Asistencia_ID" />
           </Key>
           <Property Name="Asistencia_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Asistencia_Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Asistencia_Fecha" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="ID_Alumno" Type="Int32" Nullable="false" />
           <Property Name="ID_Clase" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Alumno" Relationship="Self.FK__Asistenci__ID_Al__5441852A" FromRole="Asistencia" ToRole="Alumnos" />

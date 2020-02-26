@@ -65,6 +65,7 @@
             this.datagridAsus.TabIndex = 0;
             this.datagridAsus.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridAsus_CellContentClick);
             this.datagridAsus.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridAsus_CellEnter);
+            this.datagridAsus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.datagridAsus_KeyPress);
             // 
             // txtbuscar
             // 
@@ -151,6 +152,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmAsistencia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asistencia";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

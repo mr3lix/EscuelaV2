@@ -15,13 +15,14 @@ namespace EscuelaPowert
         public FrmAddAct()
         {
             InitializeComponent();
+            loadcm();
         }
 
         private void loadcm()
         {
             using (EscuelaEntitys db = new EscuelaEntitys())
             {
-                var s = from d in db.Tipo_Actividad select new { d.Actividad_ID };
+                var s = from d in db.Tipo_Actividad select d.Actividad_ID;
                 cmbtipo.DataSource = s.ToList();
             }
         }
@@ -33,7 +34,8 @@ namespace EscuelaPowert
                 Actividade A = new Actividade();
                 A.Actividades_Nombre = txt_name.Text;
                 A.Actividad_Descripcion = txtdescrip.Text;
-                A.ID_Actividad = cmbtipo.SelectedIndex;
+                A.ID_Actividad = Convert.ToInt32(cmbtipo.Text);
+                A.ID_Clase = 1;
                 db.Actividades.Add(A);
                 db.SaveChanges();
             }
